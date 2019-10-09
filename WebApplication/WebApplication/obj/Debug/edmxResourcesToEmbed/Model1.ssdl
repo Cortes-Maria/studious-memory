@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BancoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Beneficiario">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTipoDocumentoId" Type="int" Nullable="false" />
+    <Property Name="IdTipoParentesco" Type="int" Nullable="false" />
+    <Property Name="IdCuentaAhorro" Type="int" Nullable="false" />
+    <Property Name="DocumentoId" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Porcentaje" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="date" />
+    <Property Name="FechaDesactivo" Type="date" />
+    <Property Name="Email" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTipoDocumentoId" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="date" Nullable="false" />
+    <Property Name="DocumentoId" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CuentaAhorro">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTipoCuentaAhorro" Type="int" Nullable="false" />
+    <Property Name="IdCliente" Type="int" Nullable="false" />
+    <Property Name="NumeroCuenta" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Saldo" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CuentaObjeto">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCuentaAhorro" Type="int" Nullable="false" />
+    <Property Name="FechaInicial" Type="date" Nullable="false" />
+    <Property Name="FechaFinal" Type="date" Nullable="false" />
+    <Property Name="Saldo" Type="money" Nullable="false" />
+    <Property Name="MontoAhorro" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstadoCuenta">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCuentaAhorro" Type="int" Nullable="false" />
+    <Property Name="FechaInicio" Type="date" Nullable="false" />
+    <Property Name="FechaFin" Type="date" Nullable="false" />
+    <Property Name="Intereses" Type="int" Nullable="false" />
+    <Property Name="SaldoInicial" Type="money" Nullable="false" />
+    <Property Name="SaldoFinal" Type="money" Nullable="false" />
+    <Property Name="QRCH" Type="int" />
+    <Property Name="QRCA" Type="int" />
+  </EntityType>
+  <EntityType Name="Moneda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Simbolo" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Movimiento">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCuentaAhorro" Type="int" Nullable="false" />
+    <Property Name="IdEstadoCuenta" Type="int" Nullable="false" />
+    <Property Name="IdTipoMovimiento" Type="int" Nullable="false" />
+    <Property Name="NumeroCuenta" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Monto" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoCuentaAhorro">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMoneda" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="TasaInteresesAnual" Type="float" Nullable="false" />
+    <Property Name="Retiros" Type="int" Nullable="false" />
+    <Property Name="SaldoMinimo" Type="money" Nullable="false" />
+    <Property Name="MultaRetirosCajero" Type="money" Nullable="false" />
+    <Property Name="MultaSaldoMinimo" Type="money" Nullable="false" />
+    <Property Name="MontoMensual" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoDocumentoId">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoMovimiento">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoParentesco">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Detalle" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Beneficiario_CuentaAhorro">
+    <End Role="CuentaAhorro" Type="Self.CuentaAhorro" Multiplicity="1" />
+    <End Role="Beneficiario" Type="Self.Beneficiario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaAhorro">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Beneficiario">
+        <PropertyRef Name="IdCuentaAhorro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beneficiario_TipoDocumentoId">
+    <End Role="TipoDocumentoId" Type="Self.TipoDocumentoId" Multiplicity="1" />
+    <End Role="Beneficiario" Type="Self.Beneficiario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumentoId">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Beneficiario">
+        <PropertyRef Name="IdTipoDocumentoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beneficiario_TipoParentesco1">
+    <End Role="TipoParentesco" Type="Self.TipoParentesco" Multiplicity="1" />
+    <End Role="Beneficiario" Type="Self.Beneficiario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoParentesco">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Beneficiario">
+        <PropertyRef Name="IdTipoParentesco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_TipoDocumentoId">
+    <End Role="TipoDocumentoId" Type="Self.TipoDocumentoId" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumentoId">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IdTipoDocumentoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuentaAhorro_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="CuentaAhorro" Type="Self.CuentaAhorro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CuentaAhorro">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuentaAhorro_TipoCuentaAhorro1">
+    <End Role="TipoCuentaAhorro" Type="Self.TipoCuentaAhorro" Multiplicity="1" />
+    <End Role="CuentaAhorro" Type="Self.CuentaAhorro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCuentaAhorro">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CuentaAhorro">
+        <PropertyRef Name="IdTipoCuentaAhorro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuentaObjeto_CuentaAhorro">
+    <End Role="CuentaAhorro" Type="Self.CuentaAhorro" Multiplicity="1" />
+    <End Role="CuentaObjeto" Type="Self.CuentaObjeto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaAhorro">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CuentaObjeto">
+        <PropertyRef Name="IdCuentaAhorro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstadoCuenta_CuentaAhorro">
+    <End Role="CuentaAhorro" Type="Self.CuentaAhorro" Multiplicity="1" />
+    <End Role="EstadoCuenta" Type="Self.EstadoCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaAhorro">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EstadoCuenta">
+        <PropertyRef Name="IdCuentaAhorro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Movimiento_CuentaAhorro">
+    <End Role="CuentaAhorro" Type="Self.CuentaAhorro" Multiplicity="1" />
+    <End Role="Movimiento" Type="Self.Movimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaAhorro">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Movimiento">
+        <PropertyRef Name="IdCuentaAhorro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Movimiento_EstadoCuenta">
+    <End Role="EstadoCuenta" Type="Self.EstadoCuenta" Multiplicity="1" />
+    <End Role="Movimiento" Type="Self.Movimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoCuenta">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Movimiento">
+        <PropertyRef Name="IdEstadoCuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Movimiento_TipoMovimiento">
+    <End Role="TipoMovimiento" Type="Self.TipoMovimiento" Multiplicity="1" />
+    <End Role="Movimiento" Type="Self.Movimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoMovimiento">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Movimiento">
+        <PropertyRef Name="IdTipoMovimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoCuentaAhorro_Moneda">
+    <End Role="Moneda" Type="Self.Moneda" Multiplicity="1" />
+    <End Role="TipoCuentaAhorro" Type="Self.TipoCuentaAhorro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Moneda">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TipoCuentaAhorro">
+        <PropertyRef Name="IdMoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="banco_dbo_actualizarDocumentoIdentificacionBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NuevoNumeroDocumentoId" Type="varchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="banco_dbo_actualizarEmailBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NuevoEmail" Type="varchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="banco_dbo_actualizarNombreBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NuevoNombre" Type="varchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="banco_dbo_actualizarParentescoBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NuevoParentesco" Type="varchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="banco_dbo_actualizarPorcentajeBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NuevoPorcentaje" Type="int" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="IdCuentaAhorro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="banco_dbo_actualizarTelefonoBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NuevoTelefono" Type="varchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="banco_dbo_agregarBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdTipoDocumentoId" Type="nvarchar" Mode="In" />
+    <Parameter Name="parentesco" Type="char" Mode="In" />
+    <Parameter Name="NumeroCuenta" Type="nvarchar" Mode="In" />
+    <Parameter Name="IdCuentaAhorro" Type="int" Mode="In" />
+    <Parameter Name="DocumentoId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Porcentaje" Type="int" Mode="In" />
+    <Parameter Name="Activo" Type="bit" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
+    <Parameter Name="NumeroDocumentoId" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="banco_dbo_consultarEstadoCuenta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="banco_dbo_ejecutarInserciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="banco_dbo_eliminarBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="banco_dbo_insertarBeneficiarioXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="banco_dbo_insertarClienteXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="banco_dbo_insertarCuentaAhorroXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="banco_dbo_insertarCuentaObjetoXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="banco_dbo_insertarEstadoCuentaXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="banco_dbo_insertarMonedaXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="banco_dbo_insertarTipoCuentaAhorroXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="banco_dbo_insertarTipoDocumentoIdXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="banco_dbo_insertarTipoParentescoXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="banco_dbo_limpiarTablas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="BancoModelStoreContainer">
+    <EntitySet Name="Beneficiario" EntityType="Self.Beneficiario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CuentaAhorro" EntityType="Self.CuentaAhorro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CuentaObjeto" EntityType="Self.CuentaObjeto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstadoCuenta" EntityType="Self.EstadoCuenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Moneda" EntityType="Self.Moneda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Movimiento" EntityType="Self.Movimiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoCuentaAhorro" EntityType="Self.TipoCuentaAhorro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoDocumentoId" EntityType="Self.TipoDocumentoId" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoMovimiento" EntityType="Self.TipoMovimiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoParentesco" EntityType="Self.TipoParentesco" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Beneficiario_CuentaAhorro" Association="Self.FK_Beneficiario_CuentaAhorro">
+      <End Role="CuentaAhorro" EntitySet="CuentaAhorro" />
+      <End Role="Beneficiario" EntitySet="Beneficiario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beneficiario_TipoDocumentoId" Association="Self.FK_Beneficiario_TipoDocumentoId">
+      <End Role="TipoDocumentoId" EntitySet="TipoDocumentoId" />
+      <End Role="Beneficiario" EntitySet="Beneficiario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beneficiario_TipoParentesco1" Association="Self.FK_Beneficiario_TipoParentesco1">
+      <End Role="TipoParentesco" EntitySet="TipoParentesco" />
+      <End Role="Beneficiario" EntitySet="Beneficiario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_TipoDocumentoId" Association="Self.FK_Cliente_TipoDocumentoId">
+      <End Role="TipoDocumentoId" EntitySet="TipoDocumentoId" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuentaAhorro_Cliente" Association="Self.FK_CuentaAhorro_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="CuentaAhorro" EntitySet="CuentaAhorro" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuentaAhorro_TipoCuentaAhorro1" Association="Self.FK_CuentaAhorro_TipoCuentaAhorro1">
+      <End Role="TipoCuentaAhorro" EntitySet="TipoCuentaAhorro" />
+      <End Role="CuentaAhorro" EntitySet="CuentaAhorro" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuentaObjeto_CuentaAhorro" Association="Self.FK_CuentaObjeto_CuentaAhorro">
+      <End Role="CuentaAhorro" EntitySet="CuentaAhorro" />
+      <End Role="CuentaObjeto" EntitySet="CuentaObjeto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstadoCuenta_CuentaAhorro" Association="Self.FK_EstadoCuenta_CuentaAhorro">
+      <End Role="CuentaAhorro" EntitySet="CuentaAhorro" />
+      <End Role="EstadoCuenta" EntitySet="EstadoCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Movimiento_CuentaAhorro" Association="Self.FK_Movimiento_CuentaAhorro">
+      <End Role="CuentaAhorro" EntitySet="CuentaAhorro" />
+      <End Role="Movimiento" EntitySet="Movimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Movimiento_EstadoCuenta" Association="Self.FK_Movimiento_EstadoCuenta">
+      <End Role="EstadoCuenta" EntitySet="EstadoCuenta" />
+      <End Role="Movimiento" EntitySet="Movimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Movimiento_TipoMovimiento" Association="Self.FK_Movimiento_TipoMovimiento">
+      <End Role="TipoMovimiento" EntitySet="TipoMovimiento" />
+      <End Role="Movimiento" EntitySet="Movimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoCuentaAhorro_Moneda" Association="Self.FK_TipoCuentaAhorro_Moneda">
+      <End Role="Moneda" EntitySet="Moneda" />
+      <End Role="TipoCuentaAhorro" EntitySet="TipoCuentaAhorro" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

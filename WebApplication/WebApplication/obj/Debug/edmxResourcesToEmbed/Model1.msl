@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BancoModelStoreContainer" CdmEntityContainer="BancoEntities1">
+    <EntitySetMapping Name="Beneficiario">
+      <EntityTypeMapping TypeName="BancoModel.Beneficiario">
+        <MappingFragment StoreEntitySet="Beneficiario">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdTipoDocumentoId" ColumnName="IdTipoDocumentoId" />
+          <ScalarProperty Name="IdTipoParentesco" ColumnName="IdTipoParentesco" />
+          <ScalarProperty Name="IdCuentaAhorro" ColumnName="IdCuentaAhorro" />
+          <ScalarProperty Name="DocumentoId" ColumnName="DocumentoId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Porcentaje" ColumnName="Porcentaje" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="FechaDesactivo" ColumnName="FechaDesactivo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="BancoModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdTipoDocumentoId" ColumnName="IdTipoDocumentoId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="DocumentoId" ColumnName="DocumentoId" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentaAhorro">
+      <EntityTypeMapping TypeName="BancoModel.CuentaAhorro">
+        <MappingFragment StoreEntitySet="CuentaAhorro">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdTipoCuentaAhorro" ColumnName="IdTipoCuentaAhorro" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="NumeroCuenta" ColumnName="NumeroCuenta" />
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentaObjeto">
+      <EntityTypeMapping TypeName="BancoModel.CuentaObjeto">
+        <MappingFragment StoreEntitySet="CuentaObjeto">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdCuentaAhorro" ColumnName="IdCuentaAhorro" />
+          <ScalarProperty Name="FechaInicial" ColumnName="FechaInicial" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+          <ScalarProperty Name="MontoAhorro" ColumnName="MontoAhorro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoCuenta">
+      <EntityTypeMapping TypeName="BancoModel.EstadoCuenta">
+        <MappingFragment StoreEntitySet="EstadoCuenta">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdCuentaAhorro" ColumnName="IdCuentaAhorro" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="Intereses" ColumnName="Intereses" />
+          <ScalarProperty Name="SaldoInicial" ColumnName="SaldoInicial" />
+          <ScalarProperty Name="SaldoFinal" ColumnName="SaldoFinal" />
+          <ScalarProperty Name="QRCH" ColumnName="QRCH" />
+          <ScalarProperty Name="QRCA" ColumnName="QRCA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moneda">
+      <EntityTypeMapping TypeName="BancoModel.Moneda">
+        <MappingFragment StoreEntitySet="Moneda">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Simbolo" ColumnName="Simbolo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movimiento">
+      <EntityTypeMapping TypeName="BancoModel.Movimiento">
+        <MappingFragment StoreEntitySet="Movimiento">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdCuentaAhorro" ColumnName="IdCuentaAhorro" />
+          <ScalarProperty Name="IdEstadoCuenta" ColumnName="IdEstadoCuenta" />
+          <ScalarProperty Name="IdTipoMovimiento" ColumnName="IdTipoMovimiento" />
+          <ScalarProperty Name="NumeroCuenta" ColumnName="NumeroCuenta" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoCuentaAhorro">
+      <EntityTypeMapping TypeName="BancoModel.TipoCuentaAhorro">
+        <MappingFragment StoreEntitySet="TipoCuentaAhorro">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdMoneda" ColumnName="IdMoneda" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="TasaInteresesAnual" ColumnName="TasaInteresesAnual" />
+          <ScalarProperty Name="Retiros" ColumnName="Retiros" />
+          <ScalarProperty Name="SaldoMinimo" ColumnName="SaldoMinimo" />
+          <ScalarProperty Name="MultaRetirosCajero" ColumnName="MultaRetirosCajero" />
+          <ScalarProperty Name="MultaSaldoMinimo" ColumnName="MultaSaldoMinimo" />
+          <ScalarProperty Name="MontoMensual" ColumnName="MontoMensual" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoDocumentoId">
+      <EntityTypeMapping TypeName="BancoModel.TipoDocumentoId">
+        <MappingFragment StoreEntitySet="TipoDocumentoId">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoMovimiento">
+      <EntityTypeMapping TypeName="BancoModel.TipoMovimiento">
+        <MappingFragment StoreEntitySet="TipoMovimiento">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoParentesco">
+      <EntityTypeMapping TypeName="BancoModel.TipoParentesco">
+        <MappingFragment StoreEntitySet="TipoParentesco">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="banco_dbo_actualizarDocumentoIdentificacionBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarDocumentoIdentificacionBeneficiario" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_actualizarEmailBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarEmailBeneficiario" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_actualizarNombreBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarNombreBeneficiario" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_actualizarParentescoBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarParentescoBeneficiario" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_actualizarPorcentajeBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarPorcentajeBeneficiario" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_actualizarTelefonoBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarTelefonoBeneficiario" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_agregarBeneficiario" FunctionName="BancoModel.Store.banco_dbo_agregarBeneficiario" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_consultarEstadoCuenta" FunctionName="BancoModel.Store.banco_dbo_consultarEstadoCuenta">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BancoModel.banco_dbo_consultarEstadoCuenta_Result">
+          <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="SaldoInicial" ColumnName="SaldoInicial" />
+          <ScalarProperty Name="SaldoFinal" ColumnName="SaldoFinal" />
+          <ScalarProperty Name="InteresesAcu" ColumnName="InteresesAcu" />
+          <ScalarProperty Name="CantidadRetiros" ColumnName="CantidadRetiros" />
+          <ScalarProperty Name="CantDepositos" ColumnName="CantDepositos" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="banco_dbo_ejecutarInserciones" FunctionName="BancoModel.Store.banco_dbo_ejecutarInserciones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BancoModel.banco_dbo_ejecutarInserciones_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdTipoDocumentoId" ColumnName="IdTipoDocumentoId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="DocumentoId" ColumnName="DocumentoId" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="banco_dbo_eliminarBeneficiario" FunctionName="BancoModel.Store.banco_dbo_eliminarBeneficiario" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_insertarBeneficiarioXml" FunctionName="BancoModel.Store.banco_dbo_insertarBeneficiarioXml" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_insertarClienteXml" FunctionName="BancoModel.Store.banco_dbo_insertarClienteXml" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_insertarCuentaAhorroXml" FunctionName="BancoModel.Store.banco_dbo_insertarCuentaAhorroXml" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_insertarCuentaObjetoXml" FunctionName="BancoModel.Store.banco_dbo_insertarCuentaObjetoXml" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_insertarEstadoCuentaXml" FunctionName="BancoModel.Store.banco_dbo_insertarEstadoCuentaXml" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_insertarMonedaXml" FunctionName="BancoModel.Store.banco_dbo_insertarMonedaXml" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_insertarTipoCuentaAhorroXml" FunctionName="BancoModel.Store.banco_dbo_insertarTipoCuentaAhorroXml" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_insertarTipoDocumentoIdXml" FunctionName="BancoModel.Store.banco_dbo_insertarTipoDocumentoIdXml" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_insertarTipoParentescoXml" FunctionName="BancoModel.Store.banco_dbo_insertarTipoParentescoXml" />
+    <FunctionImportMapping FunctionImportName="banco_dbo_limpiarTablas" FunctionName="BancoModel.Store.banco_dbo_limpiarTablas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BancoModel.banco_dbo_limpiarTablas_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdTipoDocumentoId" ColumnName="IdTipoDocumentoId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="DocumentoId" ColumnName="DocumentoId" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

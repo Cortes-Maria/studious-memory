@@ -1,0 +1,109 @@
+﻿@model IEnumerable<WebApplication.Models.Beneficiario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<form class="Buscar100-form validate-form">
+    <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
+        <input class="input100" type="text" name="numCuenta">
+        <span class="focus-input100" data-placeholder="Text"></span>
+    </div>
+
+    <div class="container-Buscar100-form-btn">
+        <div class="wrap-Buscar100-form-btn">
+            <div class="Buscar100-form-bgbtn"></div>
+            <button class="Buscar100-form-btn">
+                Buscar
+            </button>
+        </div>
+    </div>
+</form>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DocumentoId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Porcentaje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDesactivo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CuentaAhorro.NumeroCuenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDocumentoId.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoParentesco.Nombre)
+        </th>
+        <th></th>
+    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DocumentoId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Porcentaje)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Activo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaDesactivo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CuentaAhorro.NumeroCuenta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoDocumentoId.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoParentesco.Nombre)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+        
+
+</table>
