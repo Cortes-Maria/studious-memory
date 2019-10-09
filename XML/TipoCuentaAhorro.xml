@@ -1,0 +1,36 @@
+<SistemaBanc>
+
+	<TipoCuentaAhorro>
+		<nombre>Pobre</nombre>
+		<saldoMinimo>1000</saldoMinimo>
+		<multaSaldoMinimo>500</multaSaldoMinimo>
+		<montoMensual>100</montoMensual>
+		<retiros>4</retiros>
+		<simMoneda>¢</simMoneda>
+		<retirosCajero>350000</retirosCajero>
+		<tasaIntereses>10</tasaIntereses>
+	</TipoCuentaAhorro>
+	
+	<TipoCuentaAhorro>
+		<nombre>Clase Media</nombre>
+		<saldoMinimo>5000</saldoMinimo>
+		<multaSaldoMinimo>1000</multaSaldoMinimo>
+		<montoMensual>200</montoMensual>
+		<retiros>6</retiros>
+		<simMoneda>¢</simMoneda>
+		<retirosCajero>580000</retirosCajero>
+		<tasaIntereses>15</tasaIntereses>
+	</TipoCuentaAhorro>
+	
+	<TipoCuentaAhorro>
+		<nombre>Clase Opulenta</nombre>
+		<saldoMinimo>7000</saldoMinimo>
+		<multaSaldoMinimo>1300</multaSaldoMinimo>
+		<montoMensual>250</montoMensual>
+		<retiros>9</retiros>
+		<simMoneda>$</simMoneda>
+		<retirosCajero>1000000</retirosCajero>
+		<tasaIntereses>20</tasaIntereses>
+	</TipoCuentaAhorro>
+
+</SistemaBanc>

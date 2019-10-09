@@ -1,0 +1,38 @@
+<SistemaBanc>
+
+	<Parentesco>
+		<nombre>P</nombre>
+		<detalle>Padre</detalle>
+	</Parentesco>
+	
+	<Parentesco>
+		<nombre>M</nombre>
+		<detalle>Madre</detalle>
+	</Parentesco>
+	
+	<Parentesco>
+		<nombre>C</nombre>
+		<detalle>Conyuge</detalle>
+	</Parentesco>
+	
+	<Parentesco>
+		<nombre>B</nombre>
+		<detalle>Hermano</detalle>
+	</Parentesco>
+	
+	<Parentesco>
+		<nombre>S</nombre>
+		<detalle>Hermana</detalle>
+	</Parentesco>
+	
+	<Parentesco>
+		<nombre>H</nombre>
+		<detalle>Hijo</detalle>
+	</Parentesco>
+	
+	<Parentesco>
+		<nombre>D</nombre>
+		<detalle>Hija</detalle>
+	</Parentesco>
+	
+</SistemaBanc>

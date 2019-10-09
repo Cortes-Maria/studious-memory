@@ -1,0 +1,15 @@
+<SistemaBanc>
+
+	<TipoID>
+		<nombre>Cedula Nacional</nombre>
+	</TipoID>
+	
+	<TipoID>
+		<nombre>Pasaporte</nombre>
+	</TipoID>
+	
+	<TipoID>
+		<nombre>Cedula Extranjera</nombre>
+	</TipoID>
+
+</SistemaBanc>

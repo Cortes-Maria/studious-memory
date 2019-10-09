@@ -1,0 +1,13 @@
+<SistemaBanc>
+
+	<Moneda>
+		<nombre>Dolares</nombre>
+		<simbolo>$</simbolo>
+	</Moneda>
+	
+	<Moneda>
+		<nombre>Colones</nombre>
+		<simbolo>¢</simbolo>
+	</Moneda>
+
+</SistemaBanc>

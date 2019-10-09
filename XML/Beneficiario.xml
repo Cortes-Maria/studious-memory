@@ -1,0 +1,177 @@
+<SistemaBanc>
+
+	<!--Cuenta 0-->
+	<Beneficiario>
+		<nombre>Felipe Ramos Gamboa</nombre>
+		<parentesco>B</parentesco>
+		<porcentajeBeneficio>34</porcentajeBeneficio>
+		<activo>1</activo> 
+		<fechaDesactivo></fechaDesactivo> 
+		<tipoDocId>Cedula Nacional</tipoDocId>
+		<docID>128759450</docID>
+		<email>feli.gutierrez@gmail.com</email>
+		<telefono1>88304655</telefono1>
+		<telefono2>24580235</telefono2>
+		<numCuenta>734561979804943076</numCuenta>
+	</Beneficiario>
+	
+	<Beneficiario>
+		<nombre>Manuel Ramos Gonzales</nombre>
+		<parentesco>P</parentesco>
+		<porcentajeBeneficio>33</porcentajeBeneficio>
+		<activo>1</activo> 
+		<fechaDesactivo></fechaDesactivo> 
+		<tipoDocId>Pasaporte</tipoDocId>
+		<docID>117820568</docID>
+		<email>manu.alfa@gmail.com</email>
+		<telefono1>84760290</telefono1>
+		<telefono2>22509830</telefono2>
+		<numCuenta>734561979804943076</numCuenta>
+	</Beneficiario>
+	
+	<Beneficiario>
+		<nombre>Camila Gamboa Quispe</nombre>
+		<parentesco>M</parentesco>
+		<porcentajeBeneficio>33</porcentajeBeneficio>
+		<activo>1</activo> 
+		<fechaDesactivo></fechaDesactivo> 
+		<tipoDocId>Cedula Nacional</tipoDocId>
+		<docID>165228845</docID>
+		<email>cami.cal@gmail.com</email>
+		<telefono1>85315200</telefono1>
+		<telefono2>22976408</telefono2>
+		<numCuenta>734561979804943076</numCuenta>
+	</Beneficiario>
+	
+	<!--Cuenta1-->
+	<Beneficiario>
+		<nombre>Marta Flores Acosta</nombre>
+		<parentesco>C</parentesco>
+		<porcentajeBeneficio>50</porcentajeBeneficio>
+		<activo>1</activo> 
+		<fechaDesactivo></fechaDesactivo> 
+		<tipoDocId>Cedula Nacional</tipoDocId>
+		<docID>172019853</docID>
+		<email>marta.flores@gmail.com</email>
+		<telefono1>60248930</telefono1>
+		<telefono2>24512450</telefono2>
+		<numCuenta>12547889652874106</numCuenta>
+	</Beneficiario>
+	
+	<Beneficiario>
+		<nombre>Sophia Leiva Rojas</nombre>
+		<parentesco>S</parentesco>
+		<porcentajeBeneficio>25</porcentajeBeneficio>
+		<activo>1</activo> 
+		<fechaDesactivo></fechaDesactivo> 
+		<tipoDocId>Cedula Nacional</tipoDocId>
+		<docID>123456951</docID>
+		<email>soph.lei@gmail.com</email>
+		<telefono1>84653079</telefono1>
+		<telefono2>21489652</telefono2>
+		<numCuenta>12547889652874106</numCuenta>
+	</Beneficiario>
+	
+	<Beneficiario>
+		<nombre>Luis Leiva Rojas</nombre>
+		<parentesco>B</parentesco>
+		<porcentajeBeneficio>25</porcentajeBeneficio>
+		<activo>1</activo> 
+		<fechaDesactivo></fechaDesactivo> 
+		<tipoDocId>Pasaporte</tipoDocId>
+		<docID>113985265</docID>
+		<email>luis.ag@gmail.com</email>
+		<telefono1>60255237</telefono1>
+		<telefono2>29874163</telefono2>
+		<numCuenta>12547889652874106</numCuenta>
+	</Beneficiario>
+	
+	<!--Cuenta2-->
+	<Beneficiario>
+		<nombre>Patricia Cruz Segura</nombre>
+		<parentesco>D</parentesco>
+		<porcentajeBeneficio>55</porcentajeBeneficio>
+		<activo>1</activo> 
+		<fechaDesactivo></fechaDesactivo> 
+		<tipoDocId>Cedula Nacional</tipoDocId>
+		<docID>185478547</docID>
+		<email>patri.cruz@gmail.com</email>
+		<telefono1>87541236</telefono1>
+		<telefono2>22846623</telefono2>
+		<numCuenta>12547456258874106</numCuenta>
+	</Beneficiario>
+	
+	<Beneficiario>
+		<nombre>Jenny Aguero Segura</nombre>
+		<parentesco>D</parentesco>
+		<porcentajeBeneficio>45</porcentajeBeneficio>
+		<activo>1</activo> 
+		<fechaDesactivo></fechaDesactivo> 
+		<tipoDocId>Cedula Nacional</tipoDocId>
+		<docID>111112394</docID>
+		<email>jen.ague@gmail.com</email>
+		<telefono1>60138525</telefono1>
+		<telefono2>27410505</telefono2>
+		<numCuenta>12547456258874106</numCuenta>
+	</Beneficiario>
+	
+	<!--Cuenta3-->
+	<Beneficiario>
+		<nombre>Gladys Alfaro Correa</nombre>
+		<parentesco>M</parentesco>
+		<porcentajeBeneficio>50</porcentajeBeneficio>
+		<activo>1</activo> 
+		<fechaDesactivo></fechaDesactivo> 
+		<tipoDocId>Cedula Nacional</tipoDocId>
+		<docID>113355875</docID>
+		<email>glady.vera@gmail.com</email>
+		<telefono1>60123212</telefono1>
+		<telefono2>25460460</telefono2>
+		<numCuenta>12456317980674157</numCuenta>
+	</Beneficiario>
+	
+	<Beneficiario>
+		<nombre>Tamara Benavides Alfaro</nombre>
+		<parentesco>S</parentesco>
+		<porcentajeBeneficio>50</porcentajeBeneficio>
+		<activo>1</activo> 
+		<fechaDesactivo></fechaDesactivo> 
+		<tipoDocId>Cedula Extranjera</tipoDocId>
+		<docID>119300579</docID>
+		<email>tsuki.ra@gmail.com</email>
+		<telefono1>87515806</telefono1>
+		<telefono2>24930520</telefono2>
+		<numCuenta>12456317980674157</numCuenta>
+	</Beneficiario>
+	
+	<!--Cuenta4-->
+	<Beneficiario>
+		<nombre>Rodolfo Garcia Moreno</nombre>
+		<parentesco>P</parentesco>
+		<porcentajeBeneficio>100</porcentajeBeneficio>
+		<activo>1</activo> 
+		<fechaDesactivo></fechaDesactivo> 
+		<tipoDocId>Pasaporte</tipoDocId>
+		<docID>158904631</docID>
+		<email>rodolf.rojas@gmail.com</email>
+		<telefono1>60123813</telefono1>
+		<telefono2>25490703</telefono2>
+		<numCuenta>17123017490647657</numCuenta>
+	</Beneficiario>
+	
+	<!--Cuenta5-->
+	<Beneficiario>
+		<nombre>Vanessa Vargas Castro</nombre>
+		<parentesco>C</parentesco>
+		<porcentajeBeneficio>100</porcentajeBeneficio>
+		<activo>1</activo> 
+		<fechaDesactivo></fechaDesactivo> 
+		<tipoDocId>Cedula Extranjera</tipoDocId>
+		<docID>158938105</docID>
+		<email>vane.vargas@gmail.com</email>
+		<telefono1>62406580</telefono1>
+		<telefono2>24503179</telefono2>
+		<numCuenta>17123017490647657</numCuenta>
+	</Beneficiario>
+	
+</SistemaBanc>
