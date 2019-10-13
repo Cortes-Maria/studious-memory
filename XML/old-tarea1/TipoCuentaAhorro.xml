@@ -4,11 +4,10 @@
 		<nombre>Pobre</nombre>
 		<saldoMinimo>1000</saldoMinimo>
 		<multaSaldoMinimo>500</multaSaldoMinimo>
-		<cargosPorServicioMensual>100</cargosPorServicioMensual>
-		<retiros>7</retiros>
+		<montoMensual>100</montoMensual>
+		<retiros>4</retiros>
 		<simMoneda>¢</simMoneda>
-		<maxRetirosCajeroHumano>3</maxRetirosCajeroHumano>
-		<multaIncumpleMaxRetirosCajeroHumano>300</multaIncumpleMaxRetirosCajeroHumano>
+		<retirosCajero>350000</retirosCajero>
 		<tasaIntereses>10</tasaIntereses>
 	</TipoCuentaAhorro>
 	
@@ -16,11 +15,10 @@
 		<nombre>Clase Media</nombre>
 		<saldoMinimo>5000</saldoMinimo>
 		<multaSaldoMinimo>1000</multaSaldoMinimo>
-		<cargosPorServicioMensual>200</cargosPorServicioMensual>
-		<retiros>9</retiros>
+		<montoMensual>200</montoMensual>
+		<retiros>6</retiros>
 		<simMoneda>¢</simMoneda>
-		<maxRetirosCajeroHumano>5</maxRetirosCajeroHumano>
-		<multaIncumpleMaxRetirosCajeroHumano>500</multaIncumpleMaxRetirosCajeroHumano>
+		<retirosCajero>580000</retirosCajero>
 		<tasaIntereses>15</tasaIntereses>
 	</TipoCuentaAhorro>
 	
@@ -28,11 +26,10 @@
 		<nombre>Clase Opulenta</nombre>
 		<saldoMinimo>7000</saldoMinimo>
 		<multaSaldoMinimo>1300</multaSaldoMinimo>
-		<cargosPorServicioMensual>250</cargosPorServicioMensual>
-		<retiros>12</retiros>
+		<montoMensual>250</montoMensual>
+		<retiros>9</retiros>
 		<simMoneda>$</simMoneda>
-		<maxRetirosCajeroHumano>5</maxRetirosCajeroHumano>
-		<multaIncumpleMaxRetirosCajeroHumano>500</multaIncumpleMaxRetirosCajeroHumano>
+		<retirosCajero>1000000</retirosCajero>
 		<tasaIntereses>20</tasaIntereses>
 	</TipoCuentaAhorro>
 
