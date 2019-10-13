@@ -5,7 +5,7 @@
 use [Banco]
 
 --Declaration of variable tables
---declare @varTipoCuentaAhorro table (nombre nvarchar(100), saldoMin money, multaSaldoMin money) ENDED HERE
+declare @varTipoCuentaAhorro table (nombre nvarchar(100), saldoMin money, multaSaldoMin money, servicioMensual money, retiros int, simMoneda nvarchar(1), qrch int, multaCajeroHumano money, tasaInteres int)
 
 --Insert the most basic (concrete) tables
 insert into dbo.Moneda (Nombre, Simbolo)
@@ -45,6 +45,28 @@ from (select cast(my_xml as xml)
       from openrowset(bulk 'C:\XML\TipoMovimiento.xml', single_blob) as T(my_xml)) as T(my_xml)
       cross apply my_xml.nodes('SistemaBanc/TipoMov') AS my_xml (TipoMoviemiento);
 
-select * from TipoMovimiento
+--select * from TipoMovimiento
 
---insert into dbo.TipoCuentaAhorro (Nombre, SaldoMinimo, MultaSaldoMinimo, MontoMensual, Retiros,)
+insert into @varTipoCuentaAhorro (nombre, saldoMin, multaSaldoMin, servicioMensual, retiros, simMoneda, qrch, multaCajeroHumano, tasaInteres)
+select
+	my_xml.varTipoCuentaAhorro.query('nombre').value('.', 'nvarchar(100)'),
+	my_xml.varTipoCuentaAhorro.query('saldoMinimo').value('.', 'money'),
+	my_xml.varTipoCuentaAhorro.query('multaSaldoMinimo').value('.', 'money'),
+	my_xml.varTipoCuentaAhorro.query('cargosPorServicioMensual').value('.', 'money'),
+	my_xml.varTipoCuentaAhorro.query('retiros').value('.', 'int'),
+	my_xml.varTipoCuentaAhorro.query('simMoneda').value('.', 'nvarchar(1)'),
+	my_xml.varTipoCuentaAhorro.query('maxRetirosCajeroHumano').value('.', 'int'),
+	my_xml.varTipoCuentaAhorro.query('multaIncumpleMaxRetirosCajeroHumano').value('.', 'money'),
+	my_xml.varTipoCuentaAhorro.query('tasaIntereses').value('.', 'int')
+from (select cast(my_xml as xml)
+      from openrowset(bulk 'C:\XML\TipoCuentaAhorro.xml', single_blob) as T(my_xml)) as T(my_xml)
+      cross apply my_xml.nodes('SistemaBanc/TipoCuentaAhorro') AS my_xml (varTipoCuentaAhorro);
+
+--QRCH: Cantidad de retiros de cajero humano
+insert into dbo.TipoCuentaAhorro (Nombre, SaldoMinimo, MultaSaldoMinimo, MontoMensual, Retiros, QRCH, MultaRetirosCajero, TasaInteresesAnual, IdMoneda)
+select vTCA.nombre, vTCA.saldoMin, vTCA.multaSaldoMin, vTCA.servicioMensual, vTCA.retiros, vTCA.qrch, vTCA.multaCajeroHumano, vTCA.tasaInteres,
+		mon.ID
+from @varTipoCuentaAhorro vTCA, Moneda mon
+where vTCA.simMoneda = mon.Simbolo
+
+--select * from TipoCuentaAhorro

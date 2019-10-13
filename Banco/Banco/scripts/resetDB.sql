@@ -42,6 +42,7 @@ alter table [dbo].[TipoCuentaAhorro]
 	drop constraint [FK_TipoCuentaAhorro_Moneda]
 go
 
+--In contrast with 'delete', 'truncate' resets the id autoincrement. Both delete the content of the tables.
 truncate table [dbo].Beneficiario;
 truncate table [dbo].Cliente;
 truncate table [dbo].CuentaAhorro;
