@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="BancoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="BancoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Beneficiario">
           <Key>
             <PropertyRef Name="ID" />
@@ -17,10 +17,12 @@
           <Property Name="Nombre" Type="nvarchar" MaxLength="40" Nullable="false" />
           <Property Name="Porcentaje" Type="int" Nullable="false" />
           <Property Name="Activo" Type="bit" Nullable="false" />
-          <Property Name="FechaNacimiento" Type="date" />
-          <Property Name="FechaDesactivo" Type="date" />
+          <Property Name="FechaNacimiento" Type="date" Nullable="false" />
+          <Property Name="FechaDesactivo" Type="date" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="40" Nullable="false" />
-          <Property Name="Telefono" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Tel1" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Tel2" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="NumeroCuenta" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Cliente">
           <Key>
@@ -33,7 +35,9 @@
           <Property Name="DocumentoId" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Usuario" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Telefono" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Tel1" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Tel2" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="CuentaAhorro">
           <Key>
@@ -44,6 +48,7 @@
           <Property Name="IdCliente" Type="int" Nullable="false" />
           <Property Name="NumeroCuenta" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Saldo" Type="money" Nullable="false" />
+          <Property Name="fechaCreacion" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="CuentaObjeto">
           <Key>
@@ -67,8 +72,9 @@
           <Property Name="Intereses" Type="int" Nullable="false" />
           <Property Name="SaldoInicial" Type="money" Nullable="false" />
           <Property Name="SaldoFinal" Type="money" Nullable="false" />
-          <Property Name="QRCH" Type="int" />
-          <Property Name="QRCA" Type="int" />
+          <Property Name="QRCH" Type="int" Nullable="false" />
+          <Property Name="QRCA" Type="int" Nullable="false" />
+          <Property Name="QDepositos" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Moneda">
           <Key>
@@ -89,6 +95,8 @@
           <Property Name="NumeroCuenta" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Fecha" Type="date" Nullable="false" />
           <Property Name="Monto" Type="money" Nullable="false" />
+          <Property Name="nuevoSaldo" Type="money" Nullable="false" />
+          <Property Name="descripcion" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="TipoCuentaAhorro">
           <Key>
@@ -103,6 +111,7 @@
           <Property Name="MultaRetirosCajero" Type="money" Nullable="false" />
           <Property Name="MultaSaldoMinimo" Type="money" Nullable="false" />
           <Property Name="MontoMensual" Type="money" Nullable="false" />
+          <Property Name="QRCH" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="TipoDocumentoId">
           <Key>
@@ -117,6 +126,7 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="tipoDC" Type="nvarchar" MaxLength="1" Nullable="false" />
         </EntityType>
         <EntityType Name="TipoParentesco">
           <Key>
@@ -287,29 +297,13 @@
           <Parameter Name="Id" Type="int" Mode="In" />
         </Function>
         <Function Name="banco_dbo_actualizarParentescoBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="NuevoParentesco" Type="int" Mode="In" />
+          <Parameter Name="NuevoParentesco" Type="varchar" Mode="In" />
           <Parameter Name="Id" Type="int" Mode="In" />
         </Function>
         <Function Name="banco_dbo_actualizarPorcentajeBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="NuevoPorcentaje" Type="int" Mode="In" />
           <Parameter Name="Id" Type="int" Mode="In" />
           <Parameter Name="IdCuentaAhorro" Type="int" Mode="In" />
-        </Function>
-        <Function Name="banco_dbo_actualizarTelefonoBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="NuevoTelefono" Type="varchar" Mode="In" />
-          <Parameter Name="Id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="banco_dbo_agregarBeneficiario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="IdTipoDocumentoId" Type="nvarchar" Mode="In" />
-          <Parameter Name="parentesco" Type="char" Mode="In" />
-          <Parameter Name="NumeroCuenta" Type="nvarchar" Mode="In" />
-          <Parameter Name="DocumentoId" Type="nvarchar" Mode="In" />
-          <Parameter Name="Nombre" Type="varchar" Mode="In" />
-          <Parameter Name="Porcentaje" Type="int" Mode="In" />
-          <Parameter Name="Activo" Type="bit" Mode="In" />
-          <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
-          <Parameter Name="Email" Type="varchar" Mode="In" />
-          <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="banco_dbo_consultarBeneficiariosCuenta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="numeroCuenta" Type="nvarchar" Mode="In" />
@@ -327,7 +321,6 @@
         <Function Name="banco_dbo_insertarCuentaObjetoXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="banco_dbo_insertarEstadoCuentaXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="banco_dbo_insertarMonedaXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="banco_dbo_insertarTipoCuentaAhorroXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="banco_dbo_insertarTipoDocumentoIdXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="banco_dbo_insertarTipoParentescoXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="banco_dbo_limpiarTablas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
@@ -335,6 +328,9 @@
           <Parameter Name="usuario" Type="nvarchar" Mode="In" />
           <Parameter Name="contrasena" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="spFill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spLinkTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spResetDB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="BancoModelStoreContainer">
           <EntitySet Name="Beneficiario" EntityType="Self.Beneficiario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
@@ -396,7 +392,8 @@
             <End Role="TipoCuentaAhorro" EntitySet="TipoCuentaAhorro" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BancoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -412,10 +409,12 @@
           <Property Name="Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Porcentaje" Type="Int32" Nullable="false" />
           <Property Name="Activo" Type="Boolean" Nullable="false" />
-          <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
-          <Property Name="FechaDesactivo" Type="DateTime" Precision="0" />
+          <Property Name="FechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FechaDesactivo" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Telefono" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tel1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tel2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumeroCuenta" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CuentaAhorro" Relationship="Self.FK_Beneficiario_CuentaAhorro" FromRole="Beneficiario" ToRole="CuentaAhorro" />
           <NavigationProperty Name="TipoDocumentoId" Relationship="Self.FK_Beneficiario_TipoDocumentoId" FromRole="Beneficiario" ToRole="TipoDocumentoId" />
           <NavigationProperty Name="TipoParentesco" Relationship="Self.FK_Beneficiario_TipoParentesco1" FromRole="Beneficiario" ToRole="TipoParentesco" />
@@ -431,7 +430,9 @@
           <Property Name="DocumentoId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Usuario" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Telefono" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tel1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tel2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="TipoDocumentoId" Relationship="Self.FK_Cliente_TipoDocumentoId" FromRole="Cliente" ToRole="TipoDocumentoId" />
           <NavigationProperty Name="CuentaAhorro" Relationship="Self.FK_CuentaAhorro_Cliente" FromRole="Cliente" ToRole="CuentaAhorro" />
         </EntityType>
@@ -444,6 +445,7 @@
           <Property Name="IdCliente" Type="Int32" Nullable="false" />
           <Property Name="NumeroCuenta" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Saldo" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="fechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="Beneficiario" Relationship="Self.FK_Beneficiario_CuentaAhorro" FromRole="CuentaAhorro" ToRole="Beneficiario" />
           <NavigationProperty Name="Cliente" Relationship="Self.FK_CuentaAhorro_Cliente" FromRole="CuentaAhorro" ToRole="Cliente" />
           <NavigationProperty Name="TipoCuentaAhorro" Relationship="Self.FK_CuentaAhorro_TipoCuentaAhorro1" FromRole="CuentaAhorro" ToRole="TipoCuentaAhorro" />
@@ -474,8 +476,9 @@
           <Property Name="Intereses" Type="Int32" Nullable="false" />
           <Property Name="SaldoInicial" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="SaldoFinal" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="QRCH" Type="Int32" />
-          <Property Name="QRCA" Type="Int32" />
+          <Property Name="QRCH" Type="Int32" Nullable="false" />
+          <Property Name="QRCA" Type="Int32" Nullable="false" />
+          <Property Name="QDepositos" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CuentaAhorro" Relationship="Self.FK_EstadoCuenta_CuentaAhorro" FromRole="EstadoCuenta" ToRole="CuentaAhorro" />
           <NavigationProperty Name="Movimiento" Relationship="Self.FK_Movimiento_EstadoCuenta" FromRole="EstadoCuenta" ToRole="Movimiento" />
         </EntityType>
@@ -499,6 +502,8 @@
           <Property Name="NumeroCuenta" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Monto" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="nuevoSaldo" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="CuentaAhorro" Relationship="Self.FK_Movimiento_CuentaAhorro" FromRole="Movimiento" ToRole="CuentaAhorro" />
           <NavigationProperty Name="EstadoCuenta" Relationship="Self.FK_Movimiento_EstadoCuenta" FromRole="Movimiento" ToRole="EstadoCuenta" />
           <NavigationProperty Name="TipoMovimiento" Relationship="Self.FK_Movimiento_TipoMovimiento" FromRole="Movimiento" ToRole="TipoMovimiento" />
@@ -516,6 +521,7 @@
           <Property Name="MultaRetirosCajero" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="MultaSaldoMinimo" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="MontoMensual" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="QRCH" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CuentaAhorro" Relationship="Self.FK_CuentaAhorro_TipoCuentaAhorro1" FromRole="TipoCuentaAhorro" ToRole="CuentaAhorro" />
           <NavigationProperty Name="Moneda" Relationship="Self.FK_TipoCuentaAhorro_Moneda" FromRole="TipoCuentaAhorro" ToRole="Moneda" />
         </EntityType>
@@ -534,6 +540,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tipoDC" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Movimiento" Relationship="Self.FK_Movimiento_TipoMovimiento" FromRole="TipoMovimiento" ToRole="Movimiento" />
         </EntityType>
         <EntityType Name="TipoParentesco">
@@ -757,12 +764,16 @@
             <Parameter Name="NuevoEmail" Mode="In" Type="String" />
             <Parameter Name="Id" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="banco_dbo_actualizarFechaNacimientoBeneficiario">
+            <Parameter Name="NuevaFechaNacimiento" Mode="In" Type="DateTime" />
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
           <FunctionImport Name="banco_dbo_actualizarNombreBeneficiario">
             <Parameter Name="NuevoNombre" Mode="In" Type="String" />
             <Parameter Name="Id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="banco_dbo_actualizarParentescoBeneficiario">
-            <Parameter Name="NuevoParentesco" Mode="In" Type="Int32" />
+            <Parameter Name="NuevoParentesco" Mode="In" Type="String" />
             <Parameter Name="Id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="banco_dbo_actualizarPorcentajeBeneficiario">
@@ -770,28 +781,15 @@
             <Parameter Name="Id" Mode="In" Type="Int32" />
             <Parameter Name="IdCuentaAhorro" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="banco_dbo_actualizarTelefonoBeneficiario">
-            <Parameter Name="NuevoTelefono" Mode="In" Type="String" />
-            <Parameter Name="Id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="banco_dbo_agregarBeneficiario">
-            <Parameter Name="IdTipoDocumentoId" Mode="In" Type="String" />
-            <Parameter Name="parentesco" Mode="In" Type="String" />
-            <Parameter Name="NumeroCuenta" Mode="In" Type="String" />
-            <Parameter Name="DocumentoId" Mode="In" Type="String" />
-            <Parameter Name="Nombre" Mode="In" Type="String" />
-            <Parameter Name="Porcentaje" Mode="In" Type="Int32" />
-            <Parameter Name="Activo" Mode="In" Type="Boolean" />
-            <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
-            <Parameter Name="Email" Mode="In" Type="String" />
-            <Parameter Name="Telefono" Mode="In" Type="String" />
+          <FunctionImport Name="banco_dbo_consultarBeneficiariosCuenta">
+            <Parameter Name="numeroCuenta" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="banco_dbo_consultarEstadoCuenta" ReturnType="Collection(BancoModel.banco_dbo_consultarEstadoCuenta_Result)">
-          <Parameter Name="Id" Mode="In" Type="String" />
+            <Parameter Name="Id" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="banco_dbo_ejecutarInserciones" ReturnType="Collection(BancoModel.banco_dbo_ejecutarInserciones_Result)" />
           <FunctionImport Name="banco_dbo_eliminarBeneficiario">
-          <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="Id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="banco_dbo_insertarBeneficiarioXml" />
           <FunctionImport Name="banco_dbo_insertarClienteXml" />
@@ -799,21 +797,16 @@
           <FunctionImport Name="banco_dbo_insertarCuentaObjetoXml" />
           <FunctionImport Name="banco_dbo_insertarEstadoCuentaXml" />
           <FunctionImport Name="banco_dbo_insertarMonedaXml" />
-          <FunctionImport Name="banco_dbo_insertarTipoCuentaAhorroXml" />
           <FunctionImport Name="banco_dbo_insertarTipoDocumentoIdXml" />
           <FunctionImport Name="banco_dbo_insertarTipoParentescoXml" />
           <FunctionImport Name="banco_dbo_limpiarTablas" ReturnType="Collection(BancoModel.banco_dbo_limpiarTablas_Result)" />
-          <FunctionImport Name="banco_dbo_actualizarFechaNacimientoBeneficiario">
-            <Parameter Name="NuevaFechaNacimiento" Mode="In" Type="DateTime" />
-            <Parameter Name="Id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="banco_dbo_consultarBeneficiariosCuenta">
-          <Parameter Name="numeroCuenta" Mode="In" Type="String" />
-          </FunctionImport>
           <FunctionImport Name="banco_dbo_Login">
             <Parameter Name="usuario" Mode="In" Type="String" />
             <Parameter Name="contrasena" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="spFill" />
+          <FunctionImport Name="spLinkTables" />
+          <FunctionImport Name="spResetDB" />
         </EntityContainer>
         <ComplexType Name="banco_dbo_consultarEstadoCuenta_Result">
           <Property Type="DateTime" Name="FechaEmision" Nullable="false" />
@@ -832,7 +825,9 @@
           <Property Type="String" Name="DocumentoId" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="Usuario" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="Password" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Tel1" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Tel2" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="email" Nullable="false" MaxLength="100" />
         </ComplexType>
         <ComplexType Name="banco_dbo_limpiarTablas_Result">
           <Property Type="Int32" Name="ID" Nullable="false" />
@@ -842,7 +837,9 @@
           <Property Type="String" Name="DocumentoId" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="Usuario" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="Password" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="Telefono" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Tel1" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Tel2" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="email" Nullable="false" MaxLength="100" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -864,7 +861,9 @@
                 <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
                 <ScalarProperty Name="FechaDesactivo" ColumnName="FechaDesactivo" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Tel1" ColumnName="Tel1" />
+                <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+                <ScalarProperty Name="NumeroCuenta" ColumnName="NumeroCuenta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -878,7 +877,9 @@
                 <ScalarProperty Name="DocumentoId" ColumnName="DocumentoId" />
                 <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Tel1" ColumnName="Tel1" />
+                <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+                <ScalarProperty Name="email" ColumnName="email" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -890,6 +891,7 @@
                 <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
                 <ScalarProperty Name="NumeroCuenta" ColumnName="NumeroCuenta" />
                 <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+                <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -917,6 +919,7 @@
                 <ScalarProperty Name="SaldoFinal" ColumnName="SaldoFinal" />
                 <ScalarProperty Name="QRCH" ColumnName="QRCH" />
                 <ScalarProperty Name="QRCA" ColumnName="QRCA" />
+                <ScalarProperty Name="QDepositos" ColumnName="QDepositos" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -939,6 +942,8 @@
                 <ScalarProperty Name="NumeroCuenta" ColumnName="NumeroCuenta" />
                 <ScalarProperty Name="Fecha" ColumnName="Fecha" />
                 <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="nuevoSaldo" ColumnName="nuevoSaldo" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -954,6 +959,7 @@
                 <ScalarProperty Name="MultaRetirosCajero" ColumnName="MultaRetirosCajero" />
                 <ScalarProperty Name="MultaSaldoMinimo" ColumnName="MultaSaldoMinimo" />
                 <ScalarProperty Name="MontoMensual" ColumnName="MontoMensual" />
+                <ScalarProperty Name="QRCH" ColumnName="QRCH" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -970,6 +976,7 @@
               <MappingFragment StoreEntitySet="TipoMovimiento">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="tipoDC" ColumnName="tipoDC" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -984,11 +991,11 @@
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="banco_dbo_actualizarDocumentoIdentificacionBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarDocumentoIdentificacionBeneficiario" />
           <FunctionImportMapping FunctionImportName="banco_dbo_actualizarEmailBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarEmailBeneficiario" />
+          <FunctionImportMapping FunctionImportName="banco_dbo_actualizarFechaNacimientoBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarFechaNacimientoBeneficiario" />
           <FunctionImportMapping FunctionImportName="banco_dbo_actualizarNombreBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarNombreBeneficiario" />
           <FunctionImportMapping FunctionImportName="banco_dbo_actualizarParentescoBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarParentescoBeneficiario" />
           <FunctionImportMapping FunctionImportName="banco_dbo_actualizarPorcentajeBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarPorcentajeBeneficiario" />
-          <FunctionImportMapping FunctionImportName="banco_dbo_actualizarTelefonoBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarTelefonoBeneficiario" />
-          <FunctionImportMapping FunctionImportName="banco_dbo_agregarBeneficiario" FunctionName="BancoModel.Store.banco_dbo_agregarBeneficiario" />
+          <FunctionImportMapping FunctionImportName="banco_dbo_consultarBeneficiariosCuenta" FunctionName="BancoModel.Store.banco_dbo_consultarBeneficiariosCuenta" />
           <FunctionImportMapping FunctionImportName="banco_dbo_consultarEstadoCuenta" FunctionName="BancoModel.Store.banco_dbo_consultarEstadoCuenta">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BancoModel.banco_dbo_consultarEstadoCuenta_Result">
@@ -1012,7 +1019,9 @@
                 <ScalarProperty Name="DocumentoId" ColumnName="DocumentoId" />
                 <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Tel1" ColumnName="Tel1" />
+                <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+                <ScalarProperty Name="email" ColumnName="email" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -1023,7 +1032,6 @@
           <FunctionImportMapping FunctionImportName="banco_dbo_insertarCuentaObjetoXml" FunctionName="BancoModel.Store.banco_dbo_insertarCuentaObjetoXml" />
           <FunctionImportMapping FunctionImportName="banco_dbo_insertarEstadoCuentaXml" FunctionName="BancoModel.Store.banco_dbo_insertarEstadoCuentaXml" />
           <FunctionImportMapping FunctionImportName="banco_dbo_insertarMonedaXml" FunctionName="BancoModel.Store.banco_dbo_insertarMonedaXml" />
-          <FunctionImportMapping FunctionImportName="banco_dbo_insertarTipoCuentaAhorroXml" FunctionName="BancoModel.Store.banco_dbo_insertarTipoCuentaAhorroXml" />
           <FunctionImportMapping FunctionImportName="banco_dbo_insertarTipoDocumentoIdXml" FunctionName="BancoModel.Store.banco_dbo_insertarTipoDocumentoIdXml" />
           <FunctionImportMapping FunctionImportName="banco_dbo_insertarTipoParentescoXml" FunctionName="BancoModel.Store.banco_dbo_insertarTipoParentescoXml" />
           <FunctionImportMapping FunctionImportName="banco_dbo_limpiarTablas" FunctionName="BancoModel.Store.banco_dbo_limpiarTablas">
@@ -1036,13 +1044,16 @@
                 <ScalarProperty Name="DocumentoId" ColumnName="DocumentoId" />
                 <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Tel1" ColumnName="Tel1" />
+                <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+                <ScalarProperty Name="email" ColumnName="email" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="banco_dbo_actualizarFechaNacimientoBeneficiario" FunctionName="BancoModel.Store.banco_dbo_actualizarFechaNacimientoBeneficiario" />
-          <FunctionImportMapping FunctionImportName="banco_dbo_consultarBeneficiariosCuenta" FunctionName="BancoModel.Store.banco_dbo_consultarBeneficiariosCuenta" />
           <FunctionImportMapping FunctionImportName="banco_dbo_Login" FunctionName="BancoModel.Store.banco_dbo_Login" />
+          <FunctionImportMapping FunctionImportName="spFill" FunctionName="BancoModel.Store.spFill" />
+          <FunctionImportMapping FunctionImportName="spLinkTables" FunctionName="BancoModel.Store.spLinkTables" />
+          <FunctionImportMapping FunctionImportName="spResetDB" FunctionName="BancoModel.Store.spResetDB" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

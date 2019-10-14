@@ -21,6 +21,8 @@ namespace WebApplication.Models
         public string NumeroCuenta { get; set; }
         public System.DateTime Fecha { get; set; }
         public decimal Monto { get; set; }
+        public decimal nuevoSaldo { get; set; }
+        public string descripcion { get; set; }
     
         public virtual CuentaAhorro CuentaAhorro { get; set; }
         public virtual EstadoCuenta EstadoCuenta { get; set; }

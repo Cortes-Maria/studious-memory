@@ -27,8 +27,9 @@ namespace WebApplication.Models
         public int Intereses { get; set; }
         public decimal SaldoInicial { get; set; }
         public decimal SaldoFinal { get; set; }
-        public Nullable<int> QRCH { get; set; }
-        public Nullable<int> QRCA { get; set; }
+        public int QRCH { get; set; }
+        public int QRCA { get; set; }
+        public int QDepositos { get; set; }
     
         public virtual CuentaAhorro CuentaAhorro { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

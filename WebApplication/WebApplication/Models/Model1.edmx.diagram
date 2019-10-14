@@ -4,18 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="26ede68c39c24bf98a9dc2fb0edbbf80" Name="Diagram1">
-        <EntityTypeShape EntityType="BancoModel.Beneficiario" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoModel.Cliente" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoModel.CuentaAhorro" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoModel.CuentaObjeto" Width="1.5" PointX="7.5" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoModel.EstadoCuenta" Width="1.5" PointX="7.5" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoModel.Moneda" Width="1.5" PointX="0.75" PointY="14.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoModel.Movimiento" Width="1.5" PointX="9.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoModel.TipoCuentaAhorro" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoModel.TipoDocumentoId" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoModel.TipoMovimiento" Width="1.5" PointX="7.5" PointY="15.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoModel.TipoParentesco" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+      <Diagram DiagramId="6f429257a6d043fc9f0add81604277ea" Name="Diagram1">
+        <EntityTypeShape EntityType="BancoModel.Beneficiario" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Cliente" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.CuentaAhorro" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.CuentaObjeto" Width="1.5" PointX="7.5" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.EstadoCuenta" Width="1.5" PointX="7.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Moneda" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Movimiento" Width="1.5" PointX="9.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.TipoCuentaAhorro" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.TipoDocumentoId" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.TipoMovimiento" Width="1.5" PointX="7.5" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.TipoParentesco" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
         <AssociationConnector Association="BancoModel.FK_Beneficiario_CuentaAhorro" ManuallyRouted="false" />
         <AssociationConnector Association="BancoModel.FK_Beneficiario_TipoDocumentoId" ManuallyRouted="false" />
         <AssociationConnector Association="BancoModel.FK_Beneficiario_TipoParentesco1" ManuallyRouted="false" />

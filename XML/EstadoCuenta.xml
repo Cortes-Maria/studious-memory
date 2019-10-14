@@ -1,0 +1,914 @@
+<SistemaBanc>
+
+	<!--Primer estado-->
+	<EstadoCuenta>
+		<fechaInicio>2018-01-01</fechaInicio>
+		<fechaFinal>2018-01-31</fechaFinal>
+		<saldoInicial>100000</saldoInicial>
+		<saldoFinal>153000</saldoFinal>
+		<intereses>500</intereses>
+		<numCuenta>734561979804943076</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-02-01</fechaInicio>
+		<fechaFinal>2018-08-28</fechaFinal>
+		<saldoInicial>153000</saldoInicial>
+		<saldoFinal>182910</saldoFinal>
+		<intereses>100</intereses>
+		<numCuenta>734561979804943076</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-03-01</fechaInicio>
+		<fechaFinal>2018-03-31</fechaFinal>
+		<saldoInicial>182910</saldoInicial>
+		<saldoFinal>200000</saldoFinal>
+		<intereses>560</intereses>
+		<numCuenta>734561979804943076</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-04-01</fechaInicio>
+		<fechaFinal>2018-04-30</fechaFinal>
+		<saldoInicial>200000</saldoInicial>
+		<saldoFinal>160000</saldoFinal>
+		<intereses>548</intereses>
+		<numCuenta>734561979804943076</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-05-01</fechaInicio>
+		<fechaFinal>2018-05-31</fechaFinal>
+		<saldoInicial>160000</saldoInicial>
+		<saldoFinal>174010</saldoFinal>
+		<intereses>458</intereses>
+		<numCuenta>734561979804943076</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-06-01</fechaInicio>
+		<fechaFinal>2018-06-30</fechaFinal>
+		<saldoInicial>174010</saldoInicial>
+		<saldoFinal>177000</saldoFinal>
+		<intereses>459</intereses>
+		<numCuenta>734561979804943076</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-07-01</fechaInicio>
+		<fechaFinal>2018-07-31</fechaFinal>
+		<saldoInicial>177000</saldoInicial>
+		<saldoFinal>153000</saldoFinal>
+		<intereses>159</intereses>
+		<numCuenta>734561979804943076</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-08-01</fechaInicio>
+		<fechaFinal>2018-08-31</fechaFinal>
+		<saldoInicial>153000</saldoInicial>
+		<saldoFinal>180120</saldoFinal>
+		<intereses>456</intereses>
+		<numCuenta>734561979804943076</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-09-01</fechaInicio>
+		<fechaFinal>2018-09-30</fechaFinal>
+		<saldoInicial>180120</saldoInicial>
+		<saldoFinal>182537</saldoFinal>
+		<intereses>456</intereses>
+		<numCuenta>734561979804943076</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-10-01</fechaInicio>
+		<fechaFinal>2018-10-31</fechaFinal>
+		<saldoInicial>182537</saldoInicial>
+		<saldoFinal>100000</saldoFinal>
+		<intereses>456</intereses>
+		<numCuenta>734561979804943076</numCuenta>
+	</EstadoCuenta>
+
+	<!--Segundo estado-->
+	<EstadoCuenta>
+		<fechaInicio>2018-02-08</fechaInicio>
+		<fechaFinal>2018-03-07</fechaFinal>
+		<saldoInicial>500000</saldoInicial>
+		<saldoFinal>458022</saldoFinal>
+		<intereses>125</intereses>
+		<numCuenta>12547889652874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-03-08</fechaInicio>
+		<fechaFinal>2018-04-07</fechaFinal>
+		<saldoInicial>458022</saldoInicial>
+		<saldoFinal>423852</saldoFinal>
+		<intereses>258</intereses>
+		<numCuenta>12547889652874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-04-08</fechaInicio>
+		<fechaFinal>2018-05-07</fechaFinal>
+		<saldoInicial>423852</saldoInicial>
+		<saldoFinal>475000</saldoFinal>
+		<intereses>456</intereses>
+		<numCuenta>12547889652874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-05-08</fechaInicio>
+		<fechaFinal>2018-06-07</fechaFinal>
+		<saldoInicial>475000</saldoInicial>
+		<saldoFinal>427456</saldoFinal>
+		<intereses>357</intereses>
+		<numCuenta>12547889652874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-06-08</fechaInicio>
+		<fechaFinal>2018-07-07</fechaFinal>
+		<saldoInicial>427456</saldoInicial>
+		<saldoFinal>475500</saldoFinal>
+		<intereses>456</intereses>
+		<numCuenta>12547889652874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-07-08</fechaInicio>
+		<fechaFinal>2018-08-07</fechaFinal>
+		<saldoInicial>475500</saldoInicial>
+		<saldoFinal>258000</saldoFinal>
+		<intereses>215</intereses>
+		<numCuenta>12547889652874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-08-08</fechaInicio>
+		<fechaFinal>2018-09-07</fechaFinal>
+		<saldoInicial>258000</saldoInicial>
+		<saldoFinal>305075</saldoFinal>
+		<intereses>159</intereses>
+		<numCuenta>12547889652874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-09-08</fechaInicio>
+		<fechaFinal>2018-10-07</fechaFinal>
+		<saldoInicial>305075</saldoInicial>
+		<saldoFinal>345982</saldoFinal>
+		<intereses>258</intereses>
+		<numCuenta>12547889652874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-10-08</fechaInicio>
+		<fechaFinal>2018-11-07</fechaFinal>
+		<saldoInicial>345982</saldoInicial>
+		<saldoFinal>432019</saldoFinal>
+		<intereses>456</intereses>
+		<numCuenta>12547889652874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-11-08</fechaInicio>
+		<fechaFinal>2018-12-07</fechaFinal>
+		<saldoInicial>432019</saldoInicial>
+		<saldoFinal>321920</saldoFinal>
+		<intereses>159</intereses>
+		<numCuenta>12547889652874106</numCuenta>
+	</EstadoCuenta>
+	<!--Abre el 07-->
+	
+	<!--Tercer estado-->
+	<EstadoCuenta>
+		<fechaInicio>2007-08-15</fechaInicio>
+		<fechaFinal>2007-09-14</fechaFinal>
+		<saldoInicial>100000</saldoInicial>
+		<saldoFinal>150000</saldoFinal>
+		<intereses>159</intereses>
+		<numCuenta>12547456258874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2007-09-15</fechaInicio>
+		<fechaFinal>2007-10-14</fechaFinal>
+		<saldoInicial>150000</saldoInicial>
+		<saldoFinal>120000</saldoFinal>
+		<intereses>258</intereses>
+		<numCuenta>12547456258874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2007-10-15</fechaInicio>
+		<fechaFinal>2007-11-14</fechaFinal>
+		<saldoInicial>120000</saldoInicial>
+		<saldoFinal>110000</saldoFinal>
+		<intereses>145</intereses>
+		<numCuenta>12547456258874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2007-11-15</fechaInicio>
+		<fechaFinal>2007-12-14</fechaFinal>
+		<saldoInicial>110000</saldoInicial>
+		<saldoFinal>105000</saldoFinal>
+		<intereses>259</intereses>
+		<numCuenta>12547456258874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2007-12-15</fechaInicio>
+		<fechaFinal>2008-01-14</fechaFinal>
+		<saldoInicial>105000</saldoInicial>
+		<saldoFinal>100000</saldoFinal>
+		<intereses>159</intereses>
+		<numCuenta>12547456258874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2008-01-15</fechaInicio>
+		<fechaFinal>2008-02-14</fechaFinal>
+		<saldoInicial>100000</saldoInicial>
+		<saldoFinal>130000</saldoFinal>
+		<intereses>56</intereses>
+		<numCuenta>12547456258874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2008-02-15</fechaInicio>
+		<fechaFinal>2008-03-14</fechaFinal>
+		<saldoInicial>130000</saldoInicial>
+		<saldoFinal>112000</saldoFinal>
+		<intereses>158</intereses>
+		<numCuenta>12547456258874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2008-03-15</fechaInicio>
+		<fechaFinal>2008-04-14</fechaFinal>
+		<saldoInicial>112000</saldoInicial>
+		<saldoFinal>100000</saldoFinal>
+		<intereses>159</intereses>
+		<numCuenta>12547456258874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2008-04-15</fechaInicio>
+		<fechaFinal>2008-05-14</fechaFinal>
+		<saldoInicial>100000</saldoInicial>
+		<saldoFinal>85600</saldoFinal>
+		<intereses>105</intereses>
+		<numCuenta>12547456258874106</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2008-05-15</fechaInicio>
+		<fechaFinal>2008-06-14</fechaFinal>
+		<saldoInicial>85600</saldoInicial>
+		<saldoFinal>90152</saldoFinal>
+		<intereses>103</intereses>
+		<numCuenta>12547456258874106</numCuenta>
+	</EstadoCuenta>
+	
+	<!--Cuarto estado-->
+	<EstadoCuenta>
+		<fechaInicio>2005-05-18</fechaInicio>
+		<fechaFinal>2005-06-17</fechaFinal>
+		<saldoInicial>1000569</saldoInicial>
+		<saldoFinal>1111852</saldoFinal>
+		<intereses>159</intereses>
+		<numCuenta>12456317980674157</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2005-06-18</fechaInicio>
+		<fechaFinal>2005-07-17</fechaFinal>
+		<saldoInicial>1111852</saldoInicial>
+		<saldoFinal>2000000</saldoFinal>
+		<intereses>156</intereses>
+		<numCuenta>12456317980674157</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2005-07-18</fechaInicio>
+		<fechaFinal>2005-08-17</fechaFinal>
+		<saldoInicial>2000000</saldoInicial>
+		<saldoFinal>1500987</saldoFinal>
+		<intereses>147</intereses>
+		<numCuenta>12456317980674157</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2005-08-18</fechaInicio>
+		<fechaFinal>2005-09-17</fechaFinal>
+		<saldoInicial>1500987</saldoInicial>
+		<saldoFinal>1200000</saldoFinal>
+		<intereses>167</intereses>
+		<numCuenta>12456317980674157</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2005-09-18</fechaInicio>
+		<fechaFinal>2005-10-17</fechaFinal>
+		<saldoInicial>1200000</saldoInicial>
+		<saldoFinal>1852369</saldoFinal>
+		<intereses>149</intereses>
+		<numCuenta>12456317980674157</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2005-10-18</fechaInicio>
+		<fechaFinal>2005-11-17</fechaFinal>
+		<saldoInicial>1852369</saldoInicial>
+		<saldoFinal>1000025</saldoFinal>
+		<intereses>123</intereses>
+		<numCuenta>12456317980674157</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2005-11-18</fechaInicio>
+		<fechaFinal>2005-12-17</fechaFinal>
+		<saldoInicial>1000025</saldoInicial>
+		<saldoFinal>951951</saldoFinal>
+		<intereses>156</intereses>
+		<numCuenta>12456317980674157</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2005-12-18</fechaInicio>
+		<fechaFinal>2006-01-17</fechaFinal>
+		<saldoInicial>951951</saldoInicial>
+		<saldoFinal>2000000</saldoFinal>
+		<intereses>146</intereses>
+		<numCuenta>12456317980674157</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2006-01-18</fechaInicio>
+		<fechaFinal>2006-02-17</fechaFinal>
+		<saldoInicial>2000000</saldoInicial>
+		<saldoFinal>1800258</saldoFinal>
+		<intereses>105</intereses>
+		<numCuenta>12456317980674157</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2006-02-18</fechaInicio>
+		<fechaFinal>2006-03-17</fechaFinal>
+		<saldoInicial>1800258</saldoInicial>
+		<saldoFinal>2589630</saldoFinal>
+		<intereses>104</intereses>
+		<numCuenta>12456317980674157</numCuenta>
+	</EstadoCuenta>
+	
+	<!--Quinto Estado-->
+	<EstadoCuenta>
+		<fechaInicio>2019-03-02</fechaInicio>
+		<fechaFinal>2019-04-01</fechaFinal>
+		<saldoInicial>258369</saldoInicial>
+		<saldoFinal>123456</saldoFinal>
+		<intereses>109</intereses>
+		<numCuenta>17123017490647657</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-04-02</fechaInicio>
+		<fechaFinal>2019-05-01</fechaFinal>
+		<saldoInicial>123456</saldoInicial>
+		<saldoFinal>200540</saldoFinal>
+		<intereses>148</intereses>
+		<numCuenta>17123017490647657</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-05-02</fechaInicio>
+		<fechaFinal>2019-06-01</fechaFinal>
+		<saldoInicial>200540</saldoInicial>
+		<saldoFinal>200548</saldoFinal>
+		<intereses>140</intereses>
+		<numCuenta>17123017490647657</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-06-02</fechaInicio>
+		<fechaFinal>2019-07-01</fechaFinal>
+		<saldoInicial>200548</saldoInicial>
+		<saldoFinal>308000</saldoFinal>
+		<intereses>134</intereses>
+		<numCuenta>17123017490647657</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-07-02</fechaInicio>
+		<fechaFinal>2019-08-01</fechaFinal>
+		<saldoInicial>308000</saldoInicial>
+		<saldoFinal>289000</saldoFinal>
+		<intereses>183</intereses>
+		<numCuenta>17123017490647657</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-08-02</fechaInicio>
+		<fechaFinal>2019-09-01</fechaFinal>
+		<saldoInicial>289000</saldoInicial>
+		<saldoFinal>352000</saldoFinal>
+		<intereses>184</intereses>
+		<numCuenta>17123017490647657</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-09-02</fechaInicio>
+		<fechaFinal>2019-10-01</fechaFinal>
+		<saldoInicial>352000</saldoInicial>
+		<saldoFinal>379155</saldoFinal>
+		<intereses>156</intereses>
+		<numCuenta>17123017490647657</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-10-02</fechaInicio>
+		<fechaFinal>2019-11-01</fechaFinal>
+		<saldoInicial>379155</saldoInicial>
+		<saldoFinal>546879</saldoFinal>
+		<intereses>149</intereses>
+		<numCuenta>17123017490647657</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-11-02</fechaInicio>
+		<fechaFinal>2019-12-01</fechaFinal>
+		<saldoInicial>546879</saldoInicial>
+		<saldoFinal>200000</saldoFinal>
+		<intereses>134</intereses>
+		<numCuenta>17123017490647657</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-12-02</fechaInicio>
+		<fechaFinal>2020-01-01</fechaFinal>
+		<saldoInicial>200000</saldoInicial>
+		<saldoFinal>380000</saldoFinal>
+		<intereses>141</intereses>
+		<numCuenta>17123017490647657</numCuenta>
+	</EstadoCuenta>
+	
+	<!--Sexto Estado-->
+	<EstadoCuenta>
+		<fechaInicio>1984-01-20</fechaInicio>
+		<fechaFinal>1984-02-19</fechaFinal>
+		<saldoInicial>4000000</saldoInicial>
+		<saldoFinal>3856000</saldoFinal>
+		<intereses>165</intereses>
+		<numCuenta>53476317980550187</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>1984-02-20</fechaInicio>
+		<fechaFinal>1984-03-19</fechaFinal>
+		<saldoInicial>3856000</saldoInicial>
+		<saldoFinal>3758987</saldoFinal>
+		<intereses>134</intereses>
+		<numCuenta>53476317980550187</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>1984-03-20</fechaInicio>
+		<fechaFinal>1984-04-19</fechaFinal>
+		<saldoInicial>3758987</saldoInicial>
+		<saldoFinal>3900230</saldoFinal>
+		<intereses></intereses>
+		<numCuenta>53476317980550187</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>1984-04-20</fechaInicio>
+		<fechaFinal>1984-05-19</fechaFinal>
+		<saldoInicial>3900230</saldoInicial>
+		<saldoFinal>4052987</saldoFinal>
+		<intereses></intereses>
+		<numCuenta>53476317980550187</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>1984-05-20</fechaInicio>
+		<fechaFinal>1984-06-19</fechaFinal>
+		<saldoInicial>4052987</saldoInicial>
+		<saldoFinal>400231</saldoFinal>
+		<intereses></intereses>
+		<numCuenta>53476317980550187</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>1984-06-20</fechaInicio>
+		<fechaFinal>1984-07-19</fechaFinal>
+		<saldoInicial>400231</saldoInicial>
+		<saldoFinal>3700789</saldoFinal>
+		<intereses></intereses>
+		<numCuenta>53476317980550187</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>1984-07-20</fechaInicio>
+		<fechaFinal>1984-08-19</fechaFinal>
+		<saldoInicial>3700789</saldoInicial>
+		<saldoFinal>3250000</saldoFinal>
+		<intereses></intereses>
+		<numCuenta>53476317980550187</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>1984-08-20</fechaInicio>
+		<fechaFinal>1984-09-19</fechaFinal>
+		<saldoInicial>3250000</saldoInicial>
+		<saldoFinal>2890456</saldoFinal>
+		<intereses></intereses>
+		<numCuenta>53476317980550187</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>1984-09-20</fechaInicio>
+		<fechaFinal>1984-10-19</fechaFinal>
+		<saldoInicial>2890456</saldoInicial>
+		<saldoFinal>3159753</saldoFinal>
+		<intereses>135</intereses>
+		<numCuenta>53476317980550187</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>1984-10-20</fechaInicio>
+		<fechaFinal>1984-11-19</fechaFinal>
+		<saldoInicial>3159753</saldoInicial>
+		<saldoFinal>3589000</saldoFinal>
+		<intereses>126</intereses>
+		<numCuenta>53476317980550187</numCuenta>
+	</EstadoCuenta>
+
+	<!--Setimo Estado-->
+	<EstadoCuenta>
+		<fechaInicio>2000-07-13</fechaInicio>
+		<fechaFinal>2000-08-12</fechaFinal>
+		<saldoInicial>325000</saldoInicial>
+		<saldoFinal>258159</saldoFinal>
+		<intereses>167</intereses>
+		<numCuenta>12328717984344100</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2000-08-13</fechaInicio>
+		<fechaFinal>2000-09-12</fechaFinal>
+		<saldoInicial>258159</saldoInicial>
+		<saldoFinal>214896</saldoFinal>
+		<intereses>137</intereses>
+		<numCuenta>12328717984344100</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2000-09-13</fechaInicio>
+		<fechaFinal>2000-10-12</fechaFinal>
+		<saldoInicial>214896</saldoInicial>
+		<saldoFinal>251300</saldoFinal>
+		<intereses>145</intereses>
+		<numCuenta>12328717984344100</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2000-10-13</fechaInicio>
+		<fechaFinal>2000-11-12</fechaFinal>
+		<saldoInicial>251300</saldoInicial>
+		<saldoFinal>153789</saldoFinal>
+		<intereses>137</intereses>
+		<numCuenta>12328717984344100</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2000-11-13</fechaInicio>
+		<fechaFinal>2000-12-12</fechaFinal>
+		<saldoInicial>153789</saldoInicial>
+		<saldoFinal>195375</saldoFinal>
+		<intereses>154</intereses>
+		<numCuenta>12328717984344100</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2000-12-13</fechaInicio>
+		<fechaFinal>2001-01-12</fechaFinal>
+		<saldoInicial>195375</saldoInicial>
+		<saldoFinal>205753</saldoFinal>
+		<intereses>113</intereses>
+		<numCuenta>12328717984344100</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2001-01-13</fechaInicio>
+		<fechaFinal>2001-02-12</fechaFinal>
+		<saldoInicial>205753</saldoInicial>
+		<saldoFinal>180753</saldoFinal>
+		<intereses>149</intereses>
+		<numCuenta>12328717984344100</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2001-02-13</fechaInicio>
+		<fechaFinal>2001-03-12</fechaFinal>
+		<saldoInicial>180753</saldoInicial>
+		<saldoFinal>203987</saldoFinal>
+		<intereses>165</intereses>
+		<numCuenta>12328717984344100</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2001-03-13</fechaInicio>
+		<fechaFinal>2001-04-12</fechaFinal>
+		<saldoInicial>203987</saldoInicial>
+		<saldoFinal>225873</saldoFinal>
+		<intereses>146</intereses>
+		<numCuenta>12328717984344100</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2001-04-13</fechaInicio>
+		<fechaFinal>2001-05-12</fechaFinal>
+		<saldoInicial>225873</saldoInicial>
+		<saldoFinal>200138</saldoFinal>
+		<intereses>165</intereses>
+		<numCuenta>12328717984344100</numCuenta>
+	</EstadoCuenta>
+	
+	<!--Octavo Estado-->
+	<EstadoCuenta>
+		<fechaInicio>2015-09-05</fechaInicio>
+		<fechaFinal>2015-10-04</fechaFinal>
+		<saldoInicial>150000</saldoInicial>
+		<saldoFinal>185269</saldoFinal>
+		<intereses>254</intereses>
+		<numCuenta>1279531451367473</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2015-10-05</fechaInicio>
+		<fechaFinal>2015-11-04</fechaFinal>
+		<saldoInicial>145269</saldoInicial>
+		<saldoFinal>134053</saldoFinal>
+		<intereses>168</intereses>
+		<numCuenta>1279531451367473</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2015-11-05</fechaInicio>
+		<fechaFinal>2015-12-04</fechaFinal>
+		<saldoInicial>104053</saldoInicial>
+		<saldoFinal>95236</saldoFinal>
+		<intereses>149</intereses>
+		<numCuenta>1279531451367473</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2015-12-05</fechaInicio>
+		<fechaFinal>2016-01-04</fechaFinal>
+		<saldoInicial>95236</saldoInicial>
+		<saldoFinal>50123</saldoFinal>
+		<intereses>153</intereses>
+		<numCuenta>1279531451367473</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2016-01-05</fechaInicio>
+		<fechaFinal>2016-02-04</fechaFinal>
+		<saldoInicial>50123</saldoInicial>
+		<saldoFinal>87258</saldoFinal>
+		<intereses>140</intereses>
+		<numCuenta>1279531451367473</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2016-02-05</fechaInicio>
+		<fechaFinal>2016-03-04</fechaFinal>
+		<saldoInicial>87258</saldoInicial>
+		<saldoFinal>94195</saldoFinal>
+		<intereses>154</intereses>
+		<numCuenta>1279531451367473</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2016-03-05</fechaInicio>
+		<fechaFinal>2016-04-04</fechaFinal>
+		<saldoInicial>94195</saldoInicial>
+		<saldoFinal>115349</saldoFinal>
+		<intereses>154</intereses>
+		<numCuenta>1279531451367473</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2016-04-05</fechaInicio>
+		<fechaFinal>2016-05-04</fechaFinal>
+		<saldoInicial>115349</saldoInicial>
+		<saldoFinal>128493</saldoFinal>
+		<intereses>156</intereses>
+		<numCuenta>1279531451367473</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2016-05-05</fechaInicio>
+		<fechaFinal>2016-06-04</fechaFinal>
+		<saldoInicial>128493</saldoInicial>
+		<saldoFinal>90153</saldoFinal>
+		<intereses>148</intereses>
+		<numCuenta>1279531451367473</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2016-06-05</fechaInicio>
+		<fechaFinal>2016-07-04</fechaFinal>
+		<saldoInicial>90153</saldoInicial>
+		<saldoFinal>75168</saldoFinal>
+		<intereses>130</intereses>
+		<numCuenta>1279531451367473</numCuenta>
+	</EstadoCuenta>
+	
+	<!--Noveno Estado-->
+	<EstadoCuenta>
+		<fechaInicio>2017-11-09</fechaInicio>
+		<fechaFinal>2017-12-08</fechaFinal>
+		<saldoInicial>7159846</saldoInicial>
+		<saldoFinal>7123789</saldoFinal>
+		<intereses>123</intereses>
+		<numCuenta>45376349123874181</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2017-12-09</fechaInicio>
+		<fechaFinal>2018-01-08</fechaFinal>
+		<saldoInicial>7123789</saldoInicial>
+		<saldoFinal>6459275</saldoFinal>
+		<intereses>156</intereses>
+		<numCuenta>45376349123874181</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-01-09</fechaInicio>
+		<fechaFinal>2018-02-08</fechaFinal>
+		<saldoInicial>6459275</saldoInicial>
+		<saldoFinal>6152795</saldoFinal>
+		<intereses>155</intereses>
+		<numCuenta>45376349123874181</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-02-09</fechaInicio>
+		<fechaFinal>2018-03-08</fechaFinal>
+		<saldoInicial>6152795</saldoInicial>
+		<saldoFinal>9156743</saldoFinal>
+		<intereses>149</intereses>
+		<numCuenta>45376349123874181</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-03-09</fechaInicio>
+		<fechaFinal>2018-04-08</fechaFinal>
+		<saldoInicial>9156743</saldoInicial>
+		<saldoFinal>9150476</saldoFinal>
+		<intereses>120</intereses>
+		<numCuenta>45376349123874181</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-04-09</fechaInicio>
+		<fechaFinal>2018-05-08</fechaFinal>
+		<saldoInicial>9150476</saldoInicial>
+		<saldoFinal>7985046</saldoFinal>
+		<intereses>156</intereses>
+		<numCuenta>45376349123874181</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-05-09</fechaInicio>
+		<fechaFinal>2018-06-08</fechaFinal>
+		<saldoInicial>7985046</saldoInicial>
+		<saldoFinal>5146752</saldoFinal>
+		<intereses>105</intereses>
+		<numCuenta>45376349123874181</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-06-09</fechaInicio>
+		<fechaFinal>2018-07-08</fechaFinal>
+		<saldoInicial>5146752</saldoInicial>
+		<saldoFinal>6875019</saldoFinal>
+		<intereses>150</intereses>
+		<numCuenta>45376349123874181</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-07-09</fechaInicio>
+		<fechaFinal>2018-08-08</fechaFinal>
+		<saldoInicial>6875019</saldoInicial>
+		<saldoFinal>5468000</saldoFinal>
+		<intereses>156</intereses>
+		<numCuenta>45376349123874181</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-08-09</fechaInicio>
+		<fechaFinal>2018-09-08</fechaFinal>
+		<saldoInicial>5468000</saldoInicial>
+		<saldoFinal>4527590</saldoFinal>
+		<intereses>120</intereses>
+		<numCuenta>45376349123874181</numCuenta>
+	</EstadoCuenta>
+	
+	<!--Decimo Estado-->
+	<EstadoCuenta>
+		<fechaInicio>2018-07-17</fechaInicio>
+		<fechaFinal>2018-08-16</fechaFinal>
+		<saldoInicial>130548</saldoInicial>
+		<saldoFinal>100548</saldoFinal>
+		<intereses>101</intereses>
+		<numCuenta>493463716018434194</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-08-17</fechaInicio>
+		<fechaFinal>2018-09-16</fechaFinal>
+		<saldoInicial>100548</saldoInicial>
+		<saldoFinal>75982</saldoFinal>
+		<intereses>105</intereses>
+		<numCuenta>493463716018434194</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-09-17</fechaInicio>
+		<fechaFinal>2018-10-16</fechaFinal>
+		<saldoInicial>75982</saldoInicial>
+		<saldoFinal>87165</saldoFinal>
+		<intereses>102</intereses>
+		<numCuenta>493463716018434194</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-10-17</fechaInicio>
+		<fechaFinal>2018-11-16</fechaFinal>
+		<saldoInicial>87165</saldoInicial>
+		<saldoFinal>112946</saldoFinal>
+		<intereses>156</intereses>
+		<numCuenta>493463716018434194</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-11-17</fechaInicio>
+		<fechaFinal>2018-12-16</fechaFinal>
+		<saldoInicial>112946</saldoInicial>
+		<saldoFinal>100465</saldoFinal>
+		<intereses>174</intereses>
+		<numCuenta>493463716018434194</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2018-12-17</fechaInicio>
+		<fechaFinal>2019-01-16</fechaFinal>
+		<saldoInicial>100465</saldoInicial>
+		<saldoFinal>110543</saldoFinal>
+		<intereses>130</intereses>
+		<numCuenta>493463716018434194</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-01-17</fechaInicio>
+		<fechaFinal>2019-02-16</fechaFinal>
+		<saldoInicial>110543</saldoInicial>
+		<saldoFinal>101624</saldoFinal>
+		<intereses>154</intereses>
+		<numCuenta>493463716018434194</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-02-17</fechaInicio>
+		<fechaFinal>2019-03-16</fechaFinal>
+		<saldoInicial>101624</saldoInicial>
+		<saldoFinal>85143</saldoFinal>
+		<intereses>192</intereses>
+		<numCuenta>493463716018434194</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-03-17</fechaInicio>
+		<fechaFinal>2019-04-16</fechaFinal>
+		<saldoInicial>85143</saldoInicial>
+		<saldoFinal>50438</saldoFinal>
+		<intereses>111</intereses>
+		<numCuenta>493463716018434194</numCuenta>
+	</EstadoCuenta>
+	
+	<EstadoCuenta>
+		<fechaInicio>2019-04-17</fechaInicio>
+		<fechaFinal>2019-05-16</fechaFinal>
+		<saldoInicial>50438</saldoInicial>
+		<saldoFinal>90428</saldoFinal>
+		<intereses>135</intereses>
+		<numCuenta>493463716018434194</numCuenta>
+	</EstadoCuenta>
+
+</SistemaBanc>

@@ -1,0 +1,124 @@
+<SistemaBanc>
+
+	<Cliente>
+		<fechaNacimiento>2000-06-10</fechaNacimiento>
+		<usuario>aramos</usuario>
+		<password>ar734</password>
+		<tipoDocId>Cedula Nacional</tipoDocId>
+		<docID>123479582</docID>
+		<email>a.ramos@gmail.com</email>
+		<telefono1>24853790</telefono1>
+		<telefono2>88583187</telefono2>
+		<nombre>Adrian Ramos Gamboa</nombre>
+	</Cliente>
+
+	<Cliente>
+		<fechaNacimiento>2000-05-13</fechaNacimiento>
+		<usuario>equiros</usuario>
+		<password>eq123</password>
+		<tipoDocId>Cedula Nacional</tipoDocId>
+		<docID>177850267</docID>
+		<email>e.quiros@gmail.com</email>
+		<telefono1>84526710</telefono1>
+		<telefono2>24512450</telefono2>
+		<nombre>Esteban Leiva Rojas</nombre>
+	</Cliente>
+	
+	<Cliente>
+		<fechaNacimiento>1987-02-20</fechaNacimiento>
+		<usuario>esegura</usuario>
+		<password>es456</password>
+		<tipoDocId>Cedula Extranjera</tipoDocId>
+		<docID>127881269</docID>
+		<email>e.segura@gmail.com</email>
+		<telefono1>87550631</telefono1>
+		<telefono2>22540007</telefono2>
+		<nombre>Estela Segura Arias</nombre>
+	</Cliente>
+	
+	<Cliente>
+		<fechaNacimiento>1980-12-20</fechaNacimiento>
+		<usuario>ybenavides</usuario>
+		<password>yb789</password>
+		<tipoDocId>Cedula Nacional</tipoDocId>
+		<docID>135472067</docID>
+		<email>y.benavides@gmail.com</email>
+		<telefono1>88852048</telefono1>
+		<telefono2>20459870</telefono2>
+		<nombre>Yorleny Benavides Alfaro</nombre>
+	</Cliente>
+	
+	<Cliente>
+		<fechaNacimiento>2001-01-01</fechaNacimiento>
+		<usuario>dgarcia</usuario>
+		<password>dg147</password>
+		<tipoDocId>Cedula Nacional</tipoDocId>
+		<docID>204563700</docID>
+		<email>d.garcia@gmail.com</email>
+		<telefono1>87003214</telefono1>
+		<telefono2>24555505</telefono2>
+		<nombre>David Garcia Ramirez</nombre>
+	</Cliente>
+	
+	<Cliente>
+		<fechaNacimiento>1964-05-10</fechaNacimiento>
+		<usuario>rramirez</usuario>
+		<password>rr258</password>
+		<tipoDocId>Cedula Extranjera</tipoDocId>
+		<docID>123753159</docID>
+		<email>r.ramirez@gmail.com</email>
+		<telefono1>82568910</telefono1>
+		<telefono2>24503179</telefono2>
+		<nombre>Rodrigo Ramirez Mora</nombre>
+	</Cliente>
+	
+	<Cliente>
+		<fechaNacimiento>1950-08-12</fechaNacimiento>
+		<usuario>jquiros</usuario>
+		<password>jq369</password>
+		<tipoDocId>Pasaporte</tipoDocId>
+		<docID>117825530</docID>
+		<email>j.quiros@gmail.com</email>
+		<telefono1>22568529</telefono1>
+		<telefono2>21597530</telefono2>
+		<nombre>Juan Quiros Segura</nombre>
+	</Cliente>
+	
+	<Cliente>
+		<fechaNacimiento>1971-02-05</fechaNacimiento>
+		<usuario>hnunez</usuario>
+		<password>hn753</password>
+		<tipoDocId>Cedula Nacional</tipoDocId>
+		<docID>123753004</docID>
+		<email>h.nunez@gmail.com</email>
+		<telefono1>24400584</telefono1>
+		<telefono2>22502129</telefono2>
+		<nombre>Hilary Nunez Herrera</nombre>
+	</Cliente>
+	
+	<Cliente>
+		<fechaNacimiento>1948-12-12</fechaNacimiento>
+		<usuario>lalfaro</usuario>
+		<password>la159</password>
+		<tipoDocId>Cedula Extranjera</tipoDocId>
+		<docID>128753706</docID>
+		<email>l.alfaro@gmail.com</email>
+		<telefono1>22734097</telefono1>
+		<telefono2>88484619</telefono2>
+		<nombre>Lourdes Alfaro Garita</nombre>
+	</Cliente>
+	
+	<Cliente>
+		<fechaNacimiento>1999-07-25</fechaNacimiento>
+		<usuario>aquesa</usuario>
+		<password>aq076</password>
+		<tipoDocId>Pasaporte</tipoDocId>
+		<docID>193724503</docID>
+		<email>a.quesa@gmail.com</email>
+		<telefono1>22456073</telefono1>
+		<telefono2>84653079</telefono2>
+		<nombre>Augusto Quesada Arias</nombre>
+	</Cliente>
+		
+</SistemaBanc>
+

@@ -27,7 +27,9 @@ namespace WebApplication.Models
         public string DocumentoId { get; set; }
         public string Usuario { get; set; }
         public string Password { get; set; }
-        public string Telefono { get; set; }
+        public string Tel1 { get; set; }
+        public string Tel2 { get; set; }
+        public string email { get; set; }
     
         public virtual TipoDocumentoId TipoDocumentoId { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

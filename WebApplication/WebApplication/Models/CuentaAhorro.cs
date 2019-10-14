@@ -28,6 +28,7 @@ namespace WebApplication.Models
         public int IdCliente { get; set; }
         public string NumeroCuenta { get; set; }
         public decimal Saldo { get; set; }
+        public System.DateTime fechaCreacion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Beneficiario> Beneficiario { get; set; }

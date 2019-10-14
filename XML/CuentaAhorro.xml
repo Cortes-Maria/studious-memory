@@ -1,0 +1,73 @@
+<SistemaBanc>
+
+	<CuentaAhorro>
+		<numCuenta>734561979804943076</numCuenta>
+		<saldo>100000</saldo>
+		<idTipoCA>Pobre</idTipoCA>  
+		<idCliente>123479582</idCliente>
+	</CuentaAhorro>
+
+	<CuentaAhorro>
+		<numCuenta>12547889652874106</numCuenta>
+		<saldo>321920</saldo>
+		<idTipoCA>Clase Media</idTipoCA>
+		<idCliente>177850267</idCliente>
+	</CuentaAhorro>
+	
+	<CuentaAhorro>
+		<numCuenta>12547456258874106</numCuenta>
+		<saldo>90152</saldo>
+		<idTipoCA>Pobre</idTipoCA> 
+		<idCliente>127881269</idCliente>
+	</CuentaAhorro>
+	
+	<CuentaAhorro>
+		<numCuenta>12456317980674157</numCuenta>
+		<saldo>2589630</saldo>
+		<idTipoCA>Clase Opulenta</idTipoCA>
+		<idCliente>135472067</idCliente>
+	</CuentaAhorro>
+	
+	<CuentaAhorro>
+		<numCuenta>17123017490647657</numCuenta>
+		<saldo>380000</saldo> 
+		<idTipoCA>Clase Media</idTipoCA>  
+		<idCliente>204563700</idCliente>
+	</CuentaAhorro>
+	
+	<CuentaAhorro>
+		<numCuenta>53476317980550187</numCuenta>
+		<saldo>3589000</saldo>
+		<idTipoCA>Clase Opulenta</idTipoCA>
+		<idCliente>123753159</idCliente>
+	</CuentaAhorro>
+	
+	<CuentaAhorro>
+		<numCuenta>12328717984344100</numCuenta>
+		<saldo>200138</saldo>
+		<idTipoCA>Clase Media</idTipoCA>
+		<idCliente>117825530</idCliente>
+	</CuentaAhorro>
+	
+	<CuentaAhorro>
+		<numCuenta>1279531451367473</numCuenta>
+		<saldo>75168</saldo> 
+		<idTipoCA>Pobre</idTipoCA>
+		<idCliente>123753004</idCliente>
+	</CuentaAhorro>
+	
+	<CuentaAhorro>
+		<numCuenta>45376349123874181</numCuenta> 
+		<saldo>4527590</saldo> 
+		<idTipoCA>Clase Opulenta</idTipoCA> 
+		<idCliente>128753706</idCliente>
+	</CuentaAhorro>
+	
+	<CuentaAhorro>
+		<numCuenta>493463716018434194</numCuenta> 
+		<saldo>90428</saldo> 
+		<idTipoCA>Pobre</idTipoCA> 
+		<idCliente>193724503</idCliente>
+	</CuentaAhorro>
+	
+</SistemaBanc>

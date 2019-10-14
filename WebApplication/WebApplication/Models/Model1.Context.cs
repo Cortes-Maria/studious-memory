@@ -65,6 +65,19 @@ namespace WebApplication.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_actualizarEmailBeneficiario", nuevoEmailParameter, idParameter);
         }
     
+        public virtual int banco_dbo_actualizarFechaNacimientoBeneficiario(Nullable<System.DateTime> nuevaFechaNacimiento, Nullable<int> id)
+        {
+            var nuevaFechaNacimientoParameter = nuevaFechaNacimiento.HasValue ?
+                new ObjectParameter("NuevaFechaNacimiento", nuevaFechaNacimiento) :
+                new ObjectParameter("NuevaFechaNacimiento", typeof(System.DateTime));
+    
+            var idParameter = id.HasValue ?
+                new ObjectParameter("Id", id) :
+                new ObjectParameter("Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_actualizarFechaNacimientoBeneficiario", nuevaFechaNacimientoParameter, idParameter);
+        }
+    
         public virtual int banco_dbo_actualizarNombreBeneficiario(string nuevoNombre, Nullable<int> id)
         {
             var nuevoNombreParameter = nuevoNombre != null ?
@@ -78,11 +91,11 @@ namespace WebApplication.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_actualizarNombreBeneficiario", nuevoNombreParameter, idParameter);
         }
     
-        public virtual int banco_dbo_actualizarParentescoBeneficiario(Nullable<int> nuevoParentesco, Nullable<int> id)
+        public virtual int banco_dbo_actualizarParentescoBeneficiario(string nuevoParentesco, Nullable<int> id)
         {
-            var nuevoParentescoParameter = nuevoParentesco.HasValue ?
+            var nuevoParentescoParameter = nuevoParentesco != null ?
                 new ObjectParameter("NuevoParentesco", nuevoParentesco) :
-                new ObjectParameter("NuevoParentesco", typeof(int));
+                new ObjectParameter("NuevoParentesco", typeof(string));
     
             var idParameter = id.HasValue ?
                 new ObjectParameter("Id", id) :
@@ -108,62 +121,13 @@ namespace WebApplication.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_actualizarPorcentajeBeneficiario", nuevoPorcentajeParameter, idParameter, idCuentaAhorroParameter);
         }
     
-        public virtual int banco_dbo_actualizarTelefonoBeneficiario(string nuevoTelefono, Nullable<int> id)
+        public virtual int banco_dbo_consultarBeneficiariosCuenta(string numeroCuenta)
         {
-            var nuevoTelefonoParameter = nuevoTelefono != null ?
-                new ObjectParameter("NuevoTelefono", nuevoTelefono) :
-                new ObjectParameter("NuevoTelefono", typeof(string));
-    
-            var idParameter = id.HasValue ?
-                new ObjectParameter("Id", id) :
-                new ObjectParameter("Id", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_actualizarTelefonoBeneficiario", nuevoTelefonoParameter, idParameter);
-        }
-    
-        public virtual int banco_dbo_agregarBeneficiario(string idTipoDocumentoId, string parentesco, string numeroCuenta, string documentoId, string nombre, Nullable<int> porcentaje, Nullable<bool> activo, Nullable<System.DateTime> fechaNacimiento, string email, string telefono)
-        {
-            var idTipoDocumentoIdParameter = idTipoDocumentoId != null ?
-                new ObjectParameter("IdTipoDocumentoId", idTipoDocumentoId) :
-                new ObjectParameter("IdTipoDocumentoId", typeof(string));
-    
-            var parentescoParameter = parentesco != null ?
-                new ObjectParameter("parentesco", parentesco) :
-                new ObjectParameter("parentesco", typeof(string));
-    
             var numeroCuentaParameter = numeroCuenta != null ?
-                new ObjectParameter("NumeroCuenta", numeroCuenta) :
-                new ObjectParameter("NumeroCuenta", typeof(string));
+                new ObjectParameter("numeroCuenta", numeroCuenta) :
+                new ObjectParameter("numeroCuenta", typeof(string));
     
-            var documentoIdParameter = documentoId != null ?
-                new ObjectParameter("DocumentoId", documentoId) :
-                new ObjectParameter("DocumentoId", typeof(string));
-    
-            var nombreParameter = nombre != null ?
-                new ObjectParameter("Nombre", nombre) :
-                new ObjectParameter("Nombre", typeof(string));
-    
-            var porcentajeParameter = porcentaje.HasValue ?
-                new ObjectParameter("Porcentaje", porcentaje) :
-                new ObjectParameter("Porcentaje", typeof(int));
-    
-            var activoParameter = activo.HasValue ?
-                new ObjectParameter("Activo", activo) :
-                new ObjectParameter("Activo", typeof(bool));
-    
-            var fechaNacimientoParameter = fechaNacimiento.HasValue ?
-                new ObjectParameter("FechaNacimiento", fechaNacimiento) :
-                new ObjectParameter("FechaNacimiento", typeof(System.DateTime));
-    
-            var emailParameter = email != null ?
-                new ObjectParameter("Email", email) :
-                new ObjectParameter("Email", typeof(string));
-    
-            var telefonoParameter = telefono != null ?
-                new ObjectParameter("Telefono", telefono) :
-                new ObjectParameter("Telefono", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_agregarBeneficiario", idTipoDocumentoIdParameter, parentescoParameter, numeroCuentaParameter, documentoIdParameter, nombreParameter, porcentajeParameter, activoParameter, fechaNacimientoParameter, emailParameter, telefonoParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_consultarBeneficiariosCuenta", numeroCuentaParameter);
         }
     
         public virtual ObjectResult<banco_dbo_consultarEstadoCuenta_Result> banco_dbo_consultarEstadoCuenta(string id)
@@ -219,11 +183,6 @@ namespace WebApplication.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_insertarMonedaXml");
         }
     
-        public virtual int banco_dbo_insertarTipoCuentaAhorroXml()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_insertarTipoCuentaAhorroXml");
-        }
-    
         public virtual int banco_dbo_insertarTipoDocumentoIdXml()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_insertarTipoDocumentoIdXml");
@@ -239,28 +198,6 @@ namespace WebApplication.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<banco_dbo_limpiarTablas_Result>("banco_dbo_limpiarTablas");
         }
     
-        public virtual int banco_dbo_actualizarFechaNacimientoBeneficiario(Nullable<System.DateTime> nuevaFechaNacimiento, Nullable<int> id)
-        {
-            var nuevaFechaNacimientoParameter = nuevaFechaNacimiento.HasValue ?
-                new ObjectParameter("NuevaFechaNacimiento", nuevaFechaNacimiento) :
-                new ObjectParameter("NuevaFechaNacimiento", typeof(System.DateTime));
-    
-            var idParameter = id.HasValue ?
-                new ObjectParameter("Id", id) :
-                new ObjectParameter("Id", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_actualizarFechaNacimientoBeneficiario", nuevaFechaNacimientoParameter, idParameter);
-        }
-    
-        public virtual int banco_dbo_consultarBeneficiariosCuenta(string numeroCuenta)
-        {
-            var numeroCuentaParameter = numeroCuenta != null ?
-                new ObjectParameter("numeroCuenta", numeroCuenta) :
-                new ObjectParameter("numeroCuenta", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_consultarBeneficiariosCuenta", numeroCuentaParameter);
-        }
-    
         public virtual int banco_dbo_Login(string usuario, string contrasena)
         {
             var usuarioParameter = usuario != null ?
@@ -272,6 +209,21 @@ namespace WebApplication.Models
                 new ObjectParameter("contrasena", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("banco_dbo_Login", usuarioParameter, contrasenaParameter);
+        }
+    
+        public virtual int spFill()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spFill");
+        }
+    
+        public virtual int spLinkTables()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spLinkTables");
+        }
+    
+        public virtual int spResetDB()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spResetDB");
         }
     }
 }

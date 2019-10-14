@@ -1,0 +1,11 @@
+<SistemaBanc>
+
+	<CuentaObjetivo>
+		<saldo>402594</saldo>
+		<fechaInicio>09-09-2019</fechaInicio>
+		<fechaFinal>10-10-2019</fechaFinal>
+		<montoAhorro>250000</montoAhorro>
+		<numCuenta>493463716018434194</numCuenta>
+	</CuentaObjetivo>
+
+</SistemaBanc>

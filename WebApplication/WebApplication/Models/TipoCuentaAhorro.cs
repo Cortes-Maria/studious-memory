@@ -29,6 +29,7 @@ namespace WebApplication.Models
         public decimal MultaRetirosCajero { get; set; }
         public decimal MultaSaldoMinimo { get; set; }
         public decimal MontoMensual { get; set; }
+        public int QRCH { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CuentaAhorro> CuentaAhorro { get; set; }

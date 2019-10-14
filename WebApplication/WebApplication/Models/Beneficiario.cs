@@ -22,10 +22,12 @@ namespace WebApplication.Models
         public string Nombre { get; set; }
         public int Porcentaje { get; set; }
         public bool Activo { get; set; }
-        public Nullable<System.DateTime> FechaNacimiento { get; set; }
-        public Nullable<System.DateTime> FechaDesactivo { get; set; }
+        public System.DateTime FechaNacimiento { get; set; }
+        public System.DateTime FechaDesactivo { get; set; }
         public string Email { get; set; }
-        public string Telefono { get; set; }
+        public string Tel1 { get; set; }
+        public string Tel2 { get; set; }
+        public int NumeroCuenta { get; set; }
     
         public virtual CuentaAhorro CuentaAhorro { get; set; }
         public virtual TipoDocumentoId TipoDocumentoId { get; set; }
