@@ -4,6 +4,8 @@
 
 use [Banco]
 
+set nocount on
+
 --Declaration of variable tables
 declare @varTipoCuentaAhorro table (nombre nvarchar(100), saldoMin money, multaSaldoMin money, servicioMensual money, retiros int, simMoneda nvarchar(1), qrch int, multaCajeroHumano money, tasaInteres int)
 
